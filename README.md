@@ -37,22 +37,12 @@ You can install SWI-Prolog using your package manager. Here are the commands for
   sudo apt-get install swi-prolog
   ```
 
-### 3. Launch the Game:
-Once you're in the project directory, start **SWI-Prolog** from the terminal.
+### 3. Start the Game:
+To start playing, simply type the following commands in the **SWI-Prolog** terminal:
 
 ```bash
-swipl
+swipl lab_escape.pl
 ```
-
-### 4. Load the Game:
-In the **SWI-Prolog** terminal, load the game file.
-
-```prolog
-consult('lab_escape.pl').
-```
-
-### 5. Start the Game:
-To start playing, simply type the following command in the **SWI-Prolog** terminal:
 
 ```prolog
 start.
@@ -70,7 +60,7 @@ You moved to the door. The security system seems active. What would you like to 
 You successfully disarmed the security system!
 ```
 
-### 7. Quitting the Game:
+### 4. Quitting the Game:
 To exit the game, type `quit` when prompted for your action.
 
 ## Development

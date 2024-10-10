@@ -1,0 +1,20 @@
+% Print plot of the game
+print_introduction :-
+    write('Welcome to Breaking Bat: The Lab Escape!'),
+    nl,
+    write('You are Walter Black, a brilliant chemist working in Sus\'s lab.'),
+    nl,
+    write('Your partner, known as Jesse Yellowman, is with you.'),
+    nl,
+    write('He is not as smart as you, but he is loyal and can help you.'),
+    nl,
+    write('Anytime you are lost, type "help", and Jesse will give you a hint.'),
+    nl,
+    write('After a botched deal, your situation has become dire.'),
+    nl,
+    write('You feel like one mistake could be your last.'),
+    nl,
+    write('After a long day of work it is time to clean up and go home.'),
+    nl,
+    write('Good luck!'),
+    nl.
