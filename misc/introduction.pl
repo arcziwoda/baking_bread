@@ -1,6 +1,6 @@
 % Print plot of the game
 print_introduction :-
-    write('Welcome to Breaking Bat: The Lab Escape!'),
+    write('Welcome to Breaking Bad: The Lab Escape!'),
     nl,
     write('You are Walter Black, a brilliant chemist working in Sus\'s lab.'),
     nl,
