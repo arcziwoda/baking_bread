@@ -1,8 +1,10 @@
 % Print plot of the game
 print_introduction :-
-    write('Welcome to Breaking Bad: The Lab Escape!'),
+    write('Welcome to Baking B(re)ad: The Lab Escape!'),
     nl,
-    write('You are Walter Black, a brilliant chemist working in Sus\'s lab.'),
+    write('You are Walter Black, a brilliant baker working in Sus\'s lab.'),
+    nl,
+    write('You are famous for your blue crystal muffins.'),
     nl,
     write('Your partner, known as Jesse Yellowman, is with you.'),
     nl,
@@ -14,7 +16,7 @@ print_introduction :-
     nl,
     write('You feel like one mistake could be your last.'),
     nl,
-    write('After a long day of work it is time to clean up and go home.'),
+    write('After a long day of work it is time to add the last ingredient to your product.'),
     nl,
     write('Good luck!'),
     nl.
