@@ -3,9 +3,9 @@
 :- consult('misc/quit.pl').
 :- consult('misc/rounds.pl').
 :- consult('misc/rules.pl').
-:- consult('level_one/plot.pl').
-:- consult('level_one/actions.pl').
-:- consult('level_one/ingredients.pl').
+:- consult('muffins_quest/plot.pl').
+:- consult('muffins_quest/actions.pl').
+:- consult('muffins_quest/ingredients.pl').
 
 start :-
     shell(clear),
