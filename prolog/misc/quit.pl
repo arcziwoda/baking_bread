@@ -6,15 +6,12 @@ quit :-
     handle_quit_response(Response).
 
 handle_quit_response(yes) :-
-    write('Goodbye!'),
-    nl,
+    write('Goodbye!'), nl,
     halt.
 
 handle_quit_response(no) :-
-    write('Continuing the game...'),
-    nl.
+    write('Continuing the game...'), nl.
 
 handle_quit_response(_) :-
-    write('Invalid response. Please type "yes" or "no".'),
-    nl,
+    write('Invalid response. Please type "yes" or "no".'), nl,
     quit.
