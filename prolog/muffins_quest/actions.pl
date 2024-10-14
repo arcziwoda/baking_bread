@@ -11,7 +11,7 @@ lookAround :-
 add(muffins, Ingredient) :-
     muffins_done,
     decrement_round,
-    write("Jesse: Yo, the muffins are done, b****! You gotta try opening those main doors now!"), nl,
+    write("Jesse: Yo, the muffins are done, b****! Anwser that phone!"), nl,
     !.
 
 add(muffins, Ingredient) :-
@@ -20,8 +20,7 @@ add(muffins, Ingredient) :-
     write("Jesse: Yo, Mr. Black! These muffins are gonna be tight!"), nl,
     write("Walter: Yes, Jesse. Now let's finish these muffins and move on."), nl,
     write("[The phone rings]"), nl,
-    write("<Saul Badman>: Hey, Walter! It's Saul. Listen, the sanepid is on their way. You gotta get outta there, man!"), nl,
-    write("Walter: Damn it! Alright, Jesse, we need to head to the main door. Quickly!"), nl,
+    write("Jesse: Yo, Mr. Black! It's Saul! Better pick that up!"), nl,
     initialize_rounds(25),
     assert(correct_ingredient_added),
     assert(sanepid_is_coming),
@@ -34,8 +33,8 @@ add(muffins, Ingredient) :-
     write("Walter: Damn it! The oven overheated! The alarms are going off!"), nl,
     write("Jesse: The police will come soon, they will know about the secret bakery!"), nl,
     write("[The phone rings]"), nl,
-    write("<Paul Badman>: Hey, genius! What did you do? The cops are on their way! You better run!"), nl,
-    write("Walter: Damn it! Alright, Jesse, we need to head to the main door. Quickly!"), nl,
+    write("Jesse: Yo, Mr. Black! It's Saul! Better pick that up!"), nl,
+    write("<Saul Badman>: Hey, genius! What did you do? The cops are on their way! You better run!"), nl,
     initialize_rounds(20),
     assert(police_is_coming),
     assert(muffins_done),

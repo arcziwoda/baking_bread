@@ -6,6 +6,7 @@
 :- consult('muffins_quest/plot.pl').
 :- consult('muffins_quest/actions.pl').
 :- consult('muffins_quest/ingredients.pl').
+:- consult('level_two/plot.pl').
 
 start :-
     shell(clear),
@@ -15,4 +16,4 @@ start :-
 
 play :-
     shell(clear),
-    start_level_one.
+    muffins_quest.
