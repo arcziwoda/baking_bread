@@ -4,9 +4,9 @@ initialize_time_left(Time) :-
     retractall(time_left(_)),
     assert(time_left(Time)).
 
-decrement_time_left :-
+decrement_time_left(Amount) :-
     time_left(CurrentTimeLeft),
-    NewTimeLeft is CurrentTimeLeft-1,
+    NewTimeLeft is CurrentTimeLeft - Amount,
     retract(time_left(CurrentTimeLeft)),
     assert(time_left(NewTimeLeft)),
     check_game_over(NewTimeLeft),
