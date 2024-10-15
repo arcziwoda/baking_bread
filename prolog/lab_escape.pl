@@ -1,19 +1,20 @@
 % lab_escape game
 :- consult('misc/introduction.pl').
 :- consult('misc/quit.pl').
-:- consult('misc/rounds.pl').
+:- consult('misc/time.pl').
 :- consult('misc/rules.pl').
-:- consult('muffins_quest/plot.pl').
-:- consult('muffins_quest/actions.pl').
-:- consult('muffins_quest/ingredients.pl').
+:- consult('misc/level.pl').
+:- consult('level_one/plot.pl').
+:- consult('level_one/actions.pl').
+:- consult('level_one/ingredients.pl').
 :- consult('level_two/plot.pl').
 
 start :-
     shell(clear),
-    initialize_rounds(30),
+    initialize_time_left(30),
     help,
     print_introduction.
 
 play :-
     shell(clear),
-    muffins_quest.
+    start_level_one.
