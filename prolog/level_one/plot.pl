@@ -1,6 +1,7 @@
 :- dynamic can_use_main_door/0.
 
 start_level_one :-
+    shell(clear),
     initialize_level(1),
     write("Walter: Yo, Jesse, you there?"), nl,
     write("Jesse: Yeah, Mr. Black, what's up?"), nl,
@@ -14,7 +15,7 @@ talkTo(jesse) :-
     \+ police_is_coming,
     current_level(1),
 
-    decrement_time_left,
+    decrement_time_left(1),
     write("Jesse: Man, I never thought baking could be this intense."), nl,
     write("Walter: It's all about precision, Jesse. One wrong move and it's all over."), nl,
     write("Jesse: Yeah, yeah, I get it. But these muffins... they're something else."), nl,
@@ -27,7 +28,7 @@ talkTo(saul) :-
     current_level(1),
     sanepid_is_coming,
 
-    decrement_time_left,
+    decrement_time_left(1),
     write("<Saul Badman>: Hey, Walter! It's Saul. Listen, the sanepid is on their way. You gotta get outta there, man!"), nl,
     write("Walter: Damn it, Saul! How much time do we have?"), nl,
     write("<Saul Badman>: Not much, maybe a few minutes. You need to move!"), nl,
@@ -41,7 +42,7 @@ talkTo(saul) :-
     current_level(1),
     police_is_coming,
 
-    decrement_time_left,
+    decrement_time_left(1),
     write("<Saul Badman>: Hey, genius! What did you do? The cops are on their way! You better run!"), nl,
     write("Walter: Damn it, Saul. How much time do we have?"), nl,
     write("<Saul Badman>: Not much, Walter. You need to get out of there, fast!"), nl,
@@ -55,5 +56,6 @@ goTo(main_door) :-
     current_level(1),
     can_use_main_door,
 
-    decrement_time_left,
-    start_level_two.
+    decrement_time_left(1),
+    start_level_two,
+    !.

@@ -16,5 +16,4 @@ start :-
     print_introduction.
 
 play :-
-    shell(clear),
     start_level_one.
