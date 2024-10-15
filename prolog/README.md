@@ -26,8 +26,8 @@ You can install SWI-Prolog using your package manager. Here are the commands for
 
 - **Ubuntu/Debian:**
   ```bash
-  sudo apt-get update
-  sudo apt-get install swi-prolog
+  sudo apt update
+  sudo apt install swi-prolog
   ```
 
 ### 3. Start the Game:
