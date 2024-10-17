@@ -1,4 +1,6 @@
 :- dynamic can_use_main_door/0.
+:- multifile talkTo/1.
+:- multifile goTo/1.
 
 start_level_one :-
     shell(clear),
@@ -11,9 +13,9 @@ start_level_one :-
     !.
 
 talkTo(jesse) :-
+    current_level(1),
     \+ sanepid_is_coming,
     \+ police_is_coming,
-    current_level(1),
 
     decrement_time_left(1),
     write("Jesse: Man, I never thought baking could be this intense."), nl,

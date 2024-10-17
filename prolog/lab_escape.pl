@@ -8,6 +8,8 @@
 :- consult('level_one/actions.pl').
 :- consult('level_one/ingredients.pl').
 :- consult('level_two/plot.pl').
+:- consult('level_three/plot.pl').
+:- consult('level_four/plot.pl').
 
 start :-
     shell(clear),
