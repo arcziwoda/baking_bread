@@ -10,7 +10,7 @@ start_level_two :-
     write("Walter: Damn it, it can only be unlocked by a key card. I think it's locked in Sus' office."), nl,
     write("Jesse: And how do we get there?"), nl,
     write("Walter: We don't have the key, but we could try to pick the lock."), nl,
-    write("Jesse: I ain't no locksmith, we should use the Kvass to melt the lock."), nl,
+    write("Jesse: I ain't no locksmith, we should use some Kvass to melt the lock."), nl,
     write("Walter: We have to pick one of the options, we don't have much time left!"), nl,
     !. 
 
