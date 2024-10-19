@@ -40,4 +40,5 @@ use(kvass) :-
     write("Jesse: Aight, now let's pour this bad boy on the lock!"), nl,
     write("Walter: Here goes nothing..."),
     nl, write('<It took '), write(TimeDissolve), write(' minutes to dissolve the lock.>'), nl, nl,
+    start_level_five,
     !.
