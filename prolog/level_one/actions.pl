@@ -1,6 +1,8 @@
 :- dynamic sanepid_is_coming/0.
 :- dynamic police_is_coming/0.
 :- dynamic muffins_done/0.
+:- multifile lookAround/1.
+:- multifile add/1.
 
 lookAround :-
     current_level(1),
