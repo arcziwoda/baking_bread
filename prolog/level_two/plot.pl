@@ -1,6 +1,5 @@
 :- dynamic can_make_kvass/0.
 :- dynamic can_make_lockpick/0.
-:- multifile goTo/1.
 
 start_level_two :-
     shell(clear),

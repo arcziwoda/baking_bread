@@ -1,3 +1,5 @@
+:- multifile goTo/1.
+
 % lab_escape game
 :- consult('misc/introduction.pl').
 :- consult('misc/quit.pl').
