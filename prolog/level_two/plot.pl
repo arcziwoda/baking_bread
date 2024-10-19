@@ -1,6 +1,5 @@
 :- dynamic can_make_kvass/0.
 :- dynamic can_make_lockpick/0.
-:- multifile talkTo/1.
 :- multifile goTo/1.
 
 start_level_two :-
@@ -14,7 +13,7 @@ start_level_two :-
     write("Walter: We have to pick one of the options, we don't have much time left!"), nl,
     !. 
 
-talkTo(jesse) :-
+choosePath(jesse) :-
     current_level(2),
     \+ can_make_lockpick,
     decrement_time_left(1),
@@ -22,7 +21,7 @@ talkTo(jesse) :-
     assert(can_make_kvass),
     !.
 
-talkTo(walter) :-
+choosePath(walter) :-
     current_level(2),
     \+ can_make_kvass,
     decrement_time_left(1),
