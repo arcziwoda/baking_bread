@@ -21,7 +21,7 @@ goTo(office_door) :-
     write("Jesse: Yo, I see some old pepper spray by the door. Maybe we should take it?"), nl,
     !.
 
-take(pepper_spray):
+take(pepper_spray) :-
     current_level(3),
     by_the_door,
 
