@@ -17,13 +17,13 @@ decrement_time_left(Amount) :-
 check_game_over(TimeLeft) :-
     TimeLeft =< 0,
     sanepid_is_coming,
-    write('Game over! The sanepid came to the lab when you were still here and closed down your lab.'), nl,
+    write('Game over! The sanepid came to the lab when you were still there and closed down your lab.'), nl,
     halt.
 
 check_game_over(TimeLeft) :-
     TimeLeft =< 0,
-    bakers_are_coming,
-    write('Game over! The bakers came to the lab when you were still here and beat you up to steal your recipe.'), nl,
+    \+ sanepid_is_coming,
+    write('Game over! The bakers came to the lab and beat you up after stealing your recipe.'), nl,
     halt.
 
 print_time_left :-
