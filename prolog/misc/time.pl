@@ -16,11 +16,15 @@ decrement_time_left(Amount) :-
 
 check_game_over(TimeLeft) :-
     TimeLeft =< 0,
-    % TODO: Implement dirrerent game overs (police or the other gang catches you)
-    write('Game over! You have run out of time.'), nl,
+    sanepid_is_coming,
+    write('Game over! The sanepid came to the lab when you were still here and closed down your lab.'), nl,
     halt.
 
-check_game_over(_).
+check_game_over(TimeLeft) :-
+    TimeLeft =< 0,
+    bakers_are_coming,
+    write('Game over! The bakers came to the lab when you were still here and beat you up to steal your recipe.'), nl,
+    halt.
 
 print_time_left :-
     time_left(CurrentTimeLeft),

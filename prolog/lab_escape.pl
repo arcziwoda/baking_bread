@@ -1,5 +1,3 @@
-:- multifile goTo/1.
-
 % lab_escape game
 :- multifile lookAround/0.
 :- multifile add/2.

@@ -1,5 +1,5 @@
+:- dynamic bakers_are_coming/0.
 :- dynamic sanepid_is_coming/0.
-:- dynamic police_is_coming/0.
 :- dynamic muffins_done/0.
 
 lookAround :-
@@ -30,7 +30,7 @@ add(muffins, Ingredient) :-
     write("[The phone rings]"), nl,
     write("Jesse: Yo, Mr. Black! It's Saul! Better pick that up!"), nl,
     assert(correct_ingredient_added),
-    assert(sanepid_is_coming),
+    assert(bakers_are_coming),
     assert(muffins_done),
     !.
 
@@ -44,7 +44,7 @@ add(muffins, Ingredient) :-
     write("Jesse: The police will come soon, they will know about the secret bakery!"), nl,
     write("[The phone rings]"), nl,
     write("Jesse: Yo, Mr. Black! It's Saul! Better pick that up!"), nl,
-    assert(police_is_coming),
+    assert(sanepid_is_coming),
     assert(muffins_done),
     !.
 

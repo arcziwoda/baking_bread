@@ -12,8 +12,8 @@ start_level_one :-
 
 talkTo(jesse) :-
     current_level(1),
+    \+ bakers_are_coming,
     \+ sanepid_is_coming,
-    \+ police_is_coming,
 
     decrement_time_left(1),
     write("Jesse: Man, I never thought baking could be this intense."), nl,
@@ -26,10 +26,10 @@ talkTo(jesse) :-
 
 talkTo(saul) :-
     current_level(1),
-    sanepid_is_coming,
+    bakers_are_coming,
 
     decrement_time_left(1),
-    write("<Saul Badman>: Hey, Walter! It's Saul. Listen, the sanepid is on their way. You gotta get outta there, man!"), nl,
+    write("<Saul Badman>: Hey, Walter! It's Saul. Listen, the rival bakers are on their way. You gotta get outta there, man!"), nl,
     write("Walter: Damn it, Saul! How much time do we have?"), nl,
     write("<Saul Badman>: Not much, maybe a few minutes. You need to move!"), nl,
     write("Jesse: Yo, Mr. Black, this is bad. What do we do?"), nl,
@@ -40,10 +40,10 @@ talkTo(saul) :-
 
 talkTo(saul) :-
     current_level(1),
-    police_is_coming,
+    sanepid_is_coming,
 
     decrement_time_left(1),
-    write("<Saul Badman>: Hey, genius! What did you do? The cops are on their way! You better run!"), nl,
+    write("<Saul Badman>: Hey, genius! What did you do? The sanepid is coming! You better run!"), nl,
     write("Walter: Damn it, Saul. How much time do we have?"), nl,
     write("<Saul Badman>: Not much, Walter. You need to get out of there, fast!"), nl,
     write("Jesse: Mr. Black, we gotta move! What now?"), nl,

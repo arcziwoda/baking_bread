@@ -7,7 +7,7 @@ lookAround :-
     current_level(3),
 
     decrement_time_left(1),
-    write("Walter: What do we have here that's useful..."), nl,
+    write("Walter: What do we have here that could be useful..."), nl,
     write("[sees some whole grain bread, water, and some yeast]"), nl,
     !.
 
@@ -31,7 +31,7 @@ add(kvass, Ingredient) :-
     \+ by_the_door,
 
     decrement_time_left(1),
-    write("Jesse: Yo! You already added the bread! Stop wasting time!"), nl,
+    write("Jesse: Yo! You already added the bread! We don't have time!"), nl,
     !.
 
 %The user adds ingredient that makes the kvass a bit stronger
@@ -77,7 +77,7 @@ add(kvass, Ingredient) :-
     \+ by_the_door,
     
     decrement_time_left(1),
-    write("Jesse: Yo! You already added water! Stop wasting time!"), nl,
+    write("Jesse: Yo! You already added water! Get a grip, we're running out of time!"), nl,
     !.
 
 %The user adds incorrect ingredients to the kvass
@@ -89,7 +89,7 @@ add(kvass, Ingredient) :-
     \+ by_the_door,
 
     decrement_time_left(1),
-    write("Jesse: Yo, that's the wrong ingredient! We gotta add the correct ingredient to make the kvass stronger."), nl,
+    write("Jesse: Yo, that's the wrong ingredient! We gotta add the right ingredient to make the kvass stronger."), nl,
     write("Walter: You're right, there's not much time left, think!"), nl,
     !.
 
@@ -100,7 +100,7 @@ add(_, _) :-
 
     decrement_time_left(1),
     write("Jesse: Come on! We're adding ingredients to the kvass, not that!"), nl,
-    write("Walter: Sorry! Got distracted!"), nl,
+    write("Walter: Sorry! I got distracted!"), nl,
     !.
 
 subtract_from_kvass_time(Amount) :-

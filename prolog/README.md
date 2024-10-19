@@ -47,7 +47,7 @@ You’ll be prompted with a description of your surroundings and given a set of 
 ```prolog
 ?- start.
 You are in the bakery lab. There's a door ahead and a security system blinking. What would you like to do?
-> go_to_door.
+> goTo(door).
 You moved to the door. The security system seems active. What would you like to do?
 > use(wire_cutters).
 You successfully disarmed the security system!
