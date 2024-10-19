@@ -1,4 +1,8 @@
 % lab_escape game
+:- multifile lookAround/0.
+:- multifile add/2.
+:- multifile goTo/1.
+
 :- consult('misc/introduction.pl').
 :- consult('misc/quit.pl').
 :- consult('misc/time.pl').

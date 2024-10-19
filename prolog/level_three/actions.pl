@@ -1,7 +1,4 @@
 :- (dynamic kvass_time_dissolve/1).
-:- multifile lookAround/1.
-:- multifile add/1.
-
 
 lookAround :-
     current_level(3),
