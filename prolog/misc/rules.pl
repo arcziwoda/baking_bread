@@ -9,6 +9,7 @@ help :-
     write("4. use(what?) - Yo, you can use something you have."), nl,
     write("5. goTo(where?) - Yo, go to a place, or somethin'."), nl,
     write("6. choosePath(name?) - Yo, sometimes you gotta choose who do you want to listen to."), nl,
+    write("7. search(what?) - Yo, search for something, maybe you'll find something useful."), nl,
     write("---------------------------------------------"), nl,
     write("Type \"help.\" to see this message again."), nl,
     write(""), nl.

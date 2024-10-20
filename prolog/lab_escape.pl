@@ -17,6 +17,8 @@
 :- consult('level_three/ingredients.pl').
 :- consult('level_four/plot.pl').
 :- consult('level_five/plot.pl').
+:- consult('level_five/actions.pl').
+:- consult('level_five/cesar.pl').
 
 start :-
     shell(clear),

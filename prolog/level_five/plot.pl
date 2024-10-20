@@ -4,5 +4,4 @@ start_level_five :-
     current_level(5),
     decrement_time_left(1),
     write("Jesse: Yessss, it worked Mr. Black, we're in!"), nl,
-    write("LEVEL FIVE TO BE IMPLEMENTED HERE"), nl,
     !. 
