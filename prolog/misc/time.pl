@@ -10,7 +10,8 @@ decrement_time_left(Amount) :-
     NewTimeLeft is CurrentTimeLeft - Amount,
     retract(time_left(CurrentTimeLeft)),
     assert(time_left(NewTimeLeft)),
-    check_game_over(NewTimeLeft),
+    % TODO: Implement working game_over checking
+    % check_game_over(NewTimeLeft),
     print_time_left,
     !.
 

@@ -2,5 +2,7 @@ start_level_five :-
     shell(clear),
     initialize_level(5),
     current_level(5),
-    write("Jesse: We're in!"), nl,
+    decrement_time_left(1),
+    write("Jesse: Yessss, it worked Mr. Black, we're in!"), nl,
+    write("LEVEL FIVE TO BE IMPLEMENTED HERE"), nl,
     !. 

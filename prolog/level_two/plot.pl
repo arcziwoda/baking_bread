@@ -4,6 +4,7 @@
 start_level_two :-
     shell(clear),
     initialize_level(2),
+    decrement_time_left(1),
     write("Jesse: Yo, the door won't open!"), nl,
     write("Walter: Damn it, it can only be unlocked by a key card. I think it's locked in Sus' office."), nl,
     write("Jesse: And how do we get there?"), nl,
@@ -31,7 +32,6 @@ choosePath(walter) :-
 goTo(lab) :-
     current_level(2),
     can_make_kvass,
-    decrement_time_left(1),
     start_level_three,
     !.
 

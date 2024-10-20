@@ -21,6 +21,7 @@ add(kvass, Ingredient) :-
     decrement_time_left(1),
     assert(bread_added),
     subtract_from_kvass_time(2),
+    write("Jesse: Do you want to add anything else or we good to go?"), nl,
     !.
 
 %The user tries to add bread again
@@ -44,6 +45,7 @@ add(kvass, Ingredient) :-
     decrement_time_left(1),
     assert(yeast_added),
     subtract_from_kvass_time(1),
+    write("Jesse: Do you want to add anything else or we good to go?"), nl,
     !.
 
 %The user tries to add yeast again
@@ -67,6 +69,7 @@ add(kvass, Ingredient) :-
     decrement_time_left(1),
     assert(water_added),
     add_to_kvass_time(1),
+    write("Jesse: Do you want to add anything else or we good to go?"), nl,
     !.
 
 %The user tries to add water again

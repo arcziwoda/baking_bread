@@ -1,12 +1,12 @@
 # Baking B(re)ad: The Lab Escape (Prolog Adventure Game)
 
-**Baking B(re)ad: The Lab Escape** is a text-based adventure game where you take on the role of a chemistry teacher turned baker who is trapped in their secret bread lab. Your goal is to navigate through the dangerous lab, avoid traps, use your bakery skills to solve puzzles, and escape before law enforcement or rival bakers catch up with you.
+**Baking B(re)ad: The Lab Escape** is a text-based adventure game where you take on the role of a chemistry teacher turned baker who is trapped in their secret bread lab. Your goal is to navigate through the dangerous lab, avoid traps, use your bakery skills to solve puzzles, and escape before sanepid or rival bakers catch up with you.
 
-The game is written in the **Prolog** programming language and follows a simple decision-making format where the player types commands to make choices and advance through the game.
+This game version is written in the **Prolog** programming language and follows a simple decision-making format where the player types commands to make choices and advance through the game.
 
 ## Game Concept
 
-You, as the player, are stuck inside a bread lab filled with dangerous chemicals and security systems. You must find a way out while collecting useful items while the time is ticking. Along the way, you’ll face logical challenges and need to use your wits and chemical knowledge to escape safely.
+You, as the player, are stuck inside a secret bakery filled with dangerous chemicals and security systems. You must find a way out while collecting useful items. The time is ticking. Along the way, you’ll face logical challenges and need to use your wits and chemical knowledge to escape safely.
 
 ## How to Play
 
@@ -15,7 +15,7 @@ First, clone the repository to your local machine using Git.
 
 ```bash
 git clone https://gitlab-stud.elka.pw.edu.pl/oszypczy/breaking-bad-lab-escape
-cd breaking-bad-lab-escape
+cd breaking-bad-lab-escape/prolog/
 ```
 
 ### 2. Install SWI-Prolog:
@@ -45,12 +45,27 @@ You’ll be prompted with a description of your surroundings and given a set of 
 
 ### Example:
 ```prolog
-?- start.
-You are in the bakery lab. There's a door ahead and a security system blinking. What would you like to do?
-> goTo(door).
-You moved to the door. The security system seems active. What would you like to do?
-> use(wire_cutters).
-You successfully disarmed the security system!
+?- goTo(office_door).
+
+<Remaining time: 16 minutes>
+
+Walter: Ok, the kvass is ready, now let's take it to the office's door.
+Jesse: Yo, I remember there was a pepper spray in the lab. Maybe we should take it?
+Walter: I don't know Jesse, it will take some time to find it...
+true.
+
+?- use(kvass).
+
+<Remaining time: 15 minutes>
+
+Jesse: Aight, now let's pour this bad boy on the lock!
+Walter: Here goes nothing...
+<It took 1 minute to dissolve the lock.>
+
+[Office door slowly opens]
+true.
+
+?-
 ```
 
 ### 4. Quitting the Game:
