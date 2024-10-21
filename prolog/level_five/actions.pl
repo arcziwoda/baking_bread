@@ -25,7 +25,7 @@ search(desk) :-
     assert(has_keycard),
     write("Walter: Found it!"), nl,
     write("Jesse: That's the stuff, Mr. Black!"), nl,
-    write("[Reads the keycard: `In order to open the main door you need to provide the PIN code]"), nl,
+    write("[Reads the keycard: In order to open the main door you need to provide the PIN code]"), nl,
     write("Walter: Damn it Jesse, we need to hack the computer to get the PIN code!"), nl,
     write("Jesse: Let's do it!"), nl,
     !.
