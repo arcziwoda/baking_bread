@@ -19,6 +19,7 @@
 :- consult('level_five/plot.pl').
 :- consult('level_five/actions.pl').
 :- consult('level_five/cesar.pl').
+:- consult('misc/end_game.pl').
 
 start :-
     shell(clear),

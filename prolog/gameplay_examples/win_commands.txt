@@ -17,5 +17,13 @@ lookAround.                         (18)
 add(kvass, whole_grain_bread).      (17)
 goTo(office_door).                  (16)
 use(kvass).                         (15)
+goTo(office).                       (14)
 
 Level 5:
+lookAround.                         (13)
+search(desk).                       (12)
+hack(computer).                     (11)
+hello
+goTo(main_door).                    (10)
+open(main_door).                    (9)
+997420
