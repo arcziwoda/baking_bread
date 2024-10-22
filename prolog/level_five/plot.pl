@@ -1,5 +1,4 @@
 start_level_five :-
-    shell(clear),
     initialize_level(5),
     current_level(5),
     decrement_time_left(1),

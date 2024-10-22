@@ -24,9 +24,10 @@ check_player_won :-
             write("Walter: We did it, Jesse! We escaped just in time!"), nl,
             player_won
         ;
-            write("Walter: We don't have any pepper spray! We're done for!"), nl,
+            write("Walter: We should have taken this pepper spray!"), nl,
             write("Hank Schrader: You're under arrest!"), nl,
-            write("Game over!"), nl
+            write("[Hank arrests Walter and Jesse]"), nl,
+            player_lost
         )
     ;
     bakers_are_coming ->
@@ -39,29 +40,32 @@ check_player_won :-
             write("Walter: We did it, Jesse! We escaped just in time!"), nl, 
             player_won
         ;
-            write("Walter: We don't have any pepper spray! We're done for!"), nl,
+            write("Walter: We should have taken this pepper spray!"), nl,
             write("Jack Welker: You're dead meat!"), nl,
-            write("Game over!"), nl
+            write("[Jack shoots Walter and Jesse]"), nl,
+            player_lost
         )
     ),
     !.
 
 player_won :-
+    write("[Walter and Jesse exit the lab]"), nl,
     write("Jesse: Yesssss! Hell yeah! Ey c'mon baby. C'mon yes!"), nl,
     write("[Jesse awaits Walter to give him a high five]"), nl,
     write("[Walter gives jesse high five]"), nl,
     write("Walter: Ahhhhh!"), nl,
     write("Jesse: Ahhhhh!"), nl,
-    (sanepid_is_coming ->
-        write("Walter: The best part is this stupid sanpid inspector didn't make it!"), nl
-    ;
-    bakers_are_coming ->
-        write("Walter: The best part is these stupid bakers didn't make it!"), nl
-    ),
     write("Jesse: Du'uh!"), nl,
     write("Walter: Let's get out of here!"), nl,
     write("=============================================="), nl,
     write("                  YOU WON                     "), nl,
     write("=============================================="), nl,
-    % halt.
+    % halt. <- commented out for test purposes
+    !.
+
+player_lost :-
+    write("=============================================="), nl,
+    write("                  YOU LOST                    "), nl,
+    write("=============================================="), nl,
+    % halt. <- commented out for test purposes
     !.

@@ -3,7 +3,6 @@
 :- dynamic lock_dissolved/0.
 
 start_level_three :-
-    shell(clear),
     initialize_level(3),
     current_level(3),
     decrement_time_left(1),

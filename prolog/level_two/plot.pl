@@ -2,7 +2,6 @@
 :- dynamic can_make_lockpick/0.
 
 start_level_two :-
-    shell(clear),
     initialize_level(2),
     decrement_time_left(1),
     write("Jesse: Yo, the door won't open!"), nl,

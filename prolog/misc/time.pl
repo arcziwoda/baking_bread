@@ -10,24 +10,34 @@ decrement_time_left(Amount) :-
     NewTimeLeft is CurrentTimeLeft - Amount,
     retract(time_left(CurrentTimeLeft)),
     assert(time_left(NewTimeLeft)),
-    % TODO: Implement working game_over checking
-    % check_game_over(NewTimeLeft),
+    check_time_left,
     print_time_left,
     !.
-
-check_game_over(TimeLeft) :-
-    TimeLeft =< 0,
-    sanepid_is_coming,
-    write('Game over! The sanepid came to the lab when you were still there and closed down your lab.'), nl,
-    halt.
-
-check_game_over(TimeLeft) :-
-    TimeLeft =< 0,
-    \+ sanepid_is_coming,
-    write('Game over! The bakers came to the lab and beat you up after stealing your recipe.'), nl,
-    halt.
 
 print_time_left :-
     time_left(CurrentTimeLeft),
     nl, write('<Remaining time: '), write(CurrentTimeLeft), write(' minutes>'), nl, nl,
+    !.
+
+check_time_left :-
+    time_left(CurrentTimeLeft),
+    (CurrentTimeLeft =< 0 ->
+        (bakers_are_coming ->
+            write("[Walter and Jesse didn't escape in time and the bakers made it to the lab]"), nl,
+            write("Jack Welker: We got you now!"), nl,
+            write("Walter: We should have taken this pepper spray!"), nl,
+            write("Jack Welker: You're dead meat!"), nl,
+            write("[Jack shoots Walter and Jesse]"), nl
+        ;
+        sanepid_is_coming ->
+            write("[Walter and Jesse didn't escape in time and the sanepid inspector made it to the lab]"), nl,
+            write("Hank Schrader: Sanepid inspection! Get out of there now!"), nl,
+            write("Walter: We should have taken this pepper spray!"), nl,
+            write("Hank Schrader: You're under arrest!"), nl,
+            write("[Hank arrests Walter and Jesse]"), nl
+        ),
+        player_lost
+    ;
+        true
+    ),
     !.
