@@ -11,9 +11,9 @@ look_around :-
     \+ pick_created,
     write("Walter: Let's see what we can find here..."), nl,
     write("[sees some metal wires, a screwdriver, a hammer, and a wrench]"), nl,
-    write("Walter: These tools could help us make a lock pick."), nl,
+    write("Walter: These tools could help us make a lock pick. I belive it is made from two things"), nl,
     write("[sees a hatch, a tool cabinet, a metal barrel, and a dumpster]"), nl,
-    write("**possible actions: create_pick(t1, t2), search_for(what, where)**"), nl,
+    write("Walter: We could search these places for the crowbar"), nl,
     !.
 
 
