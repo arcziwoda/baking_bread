@@ -3,6 +3,7 @@
 :- multifile add/2.
 :- multifile go_to/1.
 :- multifile use/1.
+:- multifile search/1.
 
 :- consult('misc/introduction.pl').
 :- consult('misc/quit.pl').

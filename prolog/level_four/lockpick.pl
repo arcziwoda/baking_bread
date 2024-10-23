@@ -9,7 +9,6 @@ create_pick(Tool1, Tool2) :-
     \+ pick_created,
     correct_tools_for_pick(Tool1, Tool2),
     write("Walter: Perfect! Now we can use the lockpick."), nl,
-    write("**Now you can use() the lockpick**"), nl,
     assert(pick_created),
     !.
 
@@ -25,7 +24,6 @@ use(lockpick) :-
     pick_created,
     \+ lock_picked,
     write("Walter: Alright, let's try to pick the lock."), nl,
-    write("**Now you can pick the lock using move_pick(direction)**"), nl,
     initialize_pick_sequence,
     !.
 
@@ -66,7 +64,6 @@ update_pick_sequence(Sequence) :-
 
 finish_pick_success :-
     write("Walter: We did it! The lock is open!"), nl,
-    write("**Now you can go_to() the door**"), nl,
     assert(lock_picked),
     !.
 
