@@ -12,7 +12,7 @@ start_level_three :-
     assert(kvass_time_dissolve(3)),
     !. 
 
-goTo(office_door) :-
+go_to(office_door) :-
     current_level(3),
     \+ by_the_door,
 
@@ -48,7 +48,7 @@ use(kvass) :-
     assert(lock_dissolved),
     !.
 
-goTo(office) :-
+go_to(office) :-
     current_level(3),
     by_the_door,
     lock_dissolved,
