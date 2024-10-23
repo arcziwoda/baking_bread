@@ -2,7 +2,7 @@
 :- dynamic has_PIN_code/0.
 :- dynamic by_the_door/0.
 
-lookAround :-
+look_around :-
     current_level(5),
     decrement_time_left(1),
     write("Walter: Let's find that keycard..."), nl,
@@ -52,7 +52,7 @@ hack(computer) :-
         write("Jesse: Just call him and tell him the encryption with your shift guess!"), nl
     ).
 
-goTo(main_door) :-
+go_to(main_door) :-
     current_level(5),
     has_keycard,
     has_PIN_code,

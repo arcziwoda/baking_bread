@@ -10,7 +10,7 @@ start_level_one :-
     write("Walter: We need to finish them up."), nl,
     !.
 
-talkTo(jesse) :-
+talk_to(jesse) :-
     current_level(1),
     \+ bakers_are_coming,
     \+ sanepid_is_coming,
@@ -23,7 +23,7 @@ talkTo(jesse) :-
     write("Jesse: I totally forgot, man. Maybe you should look around to see what's on the table."), nl, 
     !.
 
-talkTo(saul) :-
+talk_to(saul) :-
     current_level(1),
     initialize_time_left(25),
     bakers_are_coming,
@@ -39,7 +39,7 @@ talkTo(saul) :-
     assert(can_use_main_door),
     !.
 
-talkTo(saul) :-
+talk_to(saul) :-
     current_level(1),
     initialize_time_left(20),
     sanepid_is_coming,
@@ -55,7 +55,7 @@ talkTo(saul) :-
     assert(can_use_main_door),
     !.
 
-goTo(main_door) :-
+go_to(main_door) :-
     current_level(1),
     can_use_main_door,
     start_level_two,

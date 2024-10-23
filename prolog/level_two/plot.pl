@@ -12,7 +12,7 @@ start_level_two :-
     write("Walter: We have to pick one of the options, we don't have much time left!"), nl,
     !. 
 
-choosePath(jesse) :-
+choose_path(jesse) :-
     current_level(2),
     \+ can_make_lockpick,
     decrement_time_left(1),
@@ -20,21 +20,21 @@ choosePath(jesse) :-
     assert(can_make_kvass),
     !.
 
-choosePath(walter) :-
+choose_path(walter) :-
     current_level(2),
     \+ can_make_kvass,
     decrement_time_left(1),
-    write("Walter: We should be able to make the lockpick out of some scraps left in the lab. Follow me."), nl,
+    write("Walter: We should be able to make the lockpick out of some scraps left in the storage. Follow me."), nl,
     assert(can_make_lockpick),
     !.
 
-goTo(lab) :-
+go_to(lab) :-
     current_level(2),
     can_make_kvass,
     start_level_three,
     !.
 
-goTo(lab) :-
+go_to(lab) :-
     current_level(2),
     can_make_lockpick,
     decrement_time_left(1),

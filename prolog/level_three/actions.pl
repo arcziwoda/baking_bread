@@ -3,7 +3,7 @@
 :- dynamic water_added/0.
 :- dynamic yeast_added/0.
 
-lookAround :-
+look_around :-
     current_level(3),
 
     decrement_time_left(1),

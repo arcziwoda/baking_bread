@@ -2,7 +2,7 @@
 :- dynamic sanepid_is_coming/0.
 :- dynamic muffins_done/0.
 
-lookAround :-
+look_around :-
     current_level(1),
     write("Walter: Let's see what's on the table..."), nl,
     write("[sees sugar, blue food coloring, baking soda and los pollos hermanos sauce]"), nl,
