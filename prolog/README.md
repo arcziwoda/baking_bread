@@ -45,7 +45,7 @@ You’ll be prompted with a description of your surroundings and given a set of 
 
 ### Example:
 ```prolog
-?- goTo(office_door).
+?- go_to(office_door).
 
 <Remaining time: 16 minutes>
 

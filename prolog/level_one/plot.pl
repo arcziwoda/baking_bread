@@ -1,8 +1,10 @@
 :- dynamic can_use_main_door/0.
+:- dynamic playing/0.
 
 start_level_one :-
     initialize_level(1),
-
+    assert(playing),
+    
     write("Walter: Yo, Jesse, you there?"), nl,
     write("Jesse: Yeah, Mr. Black, what's up?"), nl,
     write("Walter: It's been a rough day, huh?"), nl,

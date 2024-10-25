@@ -32,4 +32,5 @@ start :-
     print_introduction.
 
 play :-
+    \+ playing,
     start_level_one.
