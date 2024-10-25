@@ -6,7 +6,7 @@
 ending :-
     write("[The main door opens]"), nl,
     time_left(TimeLeft),
-    (TimeLeft > 10 ->
+    (TimeLeft >= 10 ->
         player_won
     ;
         check_player_won
