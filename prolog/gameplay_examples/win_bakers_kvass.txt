@@ -1,0 +1,30 @@
+start.                              Time left:
+play.                               
+
+Level 1:
+talk_to(jesse).                      
+look_around.                         
+add(muffins, blue_food_coloring).   
+talk_to(saul).                       (25)
+go_to(main_door).                    (24)
+
+Level 2:
+choose_path(jesse).                  (23)
+go_to(lab).                          (22)
+
+Level 3:
+look_around.                         (21)
+add(kvass, whole_grain_bread).       (20)
+go_to(office_door).                  (19)
+take(pepper_spray).                  (17)
+use(kvass).                          (16)
+go_to(office).                       (15)
+
+Level 5:
+look_around.                         (14)
+search(desk).                        (13)
+hack(computer).                      (12)
+hello
+go_to(main_door).                    (11)
+open(main_door).                     (10)
+997420

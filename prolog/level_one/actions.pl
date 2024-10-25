@@ -33,7 +33,7 @@ add(muffins, Ingredient) :-
     current_level(1),
     explosive_ingredient(Ingredient),
     write("Walter: Damn it! The oven overheated! The alarms are going off!"), nl,
-    write("Jesse: The police will come soon, they will know about the secret bakery!"), nl,
+    write("Jesse: The sanepid will come soon, they will know about the secret bakery!"), nl,
     write("[The phone rings]"), nl,
     write("Jesse: Yo, Mr. Black! It's Saul! Better pick that up!"), nl,
     assert(sanepid_is_coming),

@@ -11,8 +11,19 @@ caesar_encrypt([H|T], Shift, [E|ET]) :-
     caesar_encrypt(T, Shift, ET).
 
 % Predicate to print the shifted string
-call_cesar(String, Shift) :-
+talk_to(cesar) :-
+    current_level(5),
     decrement_time_left(1),
+    write("Jesse: Let's see if Cesar picks up..."), nl,
+    write("Cesar: Hello?"), nl,
+    write("Jesse: Yo Cesar, it's Jesse, I don't have time to explain, but can you help us encrypt a computer password?"), nl,
+    write("Cesar: Um... sure, what's the decrypted password?"), nl,
+    read_string(user_input, "\n", "", _, String),
+    write("Jesse: The encrypted password is "), write(String), write("."), nl,
+    write("Cesar: Alright, now I need you to tell me by how much to shift the letters."), nl,
+    read_string(user_input, "\n", "", _, ShiftInput),
+    atom_number(ShiftInput, Shift),
+    write("Jesse: Eee... I don't know, but maybe "), write(Shift), write("."), nl,
     string_chars(String, Chars),
     caesar_encrypt(Chars, Shift, EncryptedChars),
     string_chars(EncryptedString, EncryptedChars),
