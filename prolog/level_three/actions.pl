@@ -6,7 +6,6 @@
 look_around :-
     current_level(3),
 
-    decrement_time_left(1),
     write("Walter: What do we have here that could be useful..."), nl,
     write("[sees some whole grain bread, water, and some yeast]"), nl,
     !.

@@ -13,35 +13,32 @@ go_to(storage).                         (17)
 
 Level 4:
 look_around.
-create_pick(metal_wires, screwdriver)   (15)
+create_pick(metal_wires, screwdriver).  (15)
 create_pick(screwdriver, hammer).       (13)
 create_pick(metal_wires, hammer).
 search(hatch).                          (12)
 search(dumpster).                       (11)
+go_to(office_door).                     (10)
 use(lockpick).
-move_pick(down).                        (10)
+move_pick(up).                          
+move_pick(up).                          (9)
+move_pick(down).                        (8)
 move_pick(up).
-move_pick(down).                        (9)
-move_pick(up).
-move_pick(down).
-move_pick(left).                        (8)
-move_pick(up).
+move_pick(down).                        (7)
+move_pick(up).                          
 move_pick(right).
-move_pick(down).
-go_to(office).                            (7)
+move_pick(down).                        (6)
+go_to(office).                          (5)
 
 Level 5:
-look_around.                            (6)
-search(desk).                           (5)
+look_around.
+search(desk).                           (4)
 hack(computer).
-abcde                                   (4)
-talk_to(cesar).                         (3)
-ebiil
-1
+abcde                                   (3)
 talk_to(cesar).                         (2)
 ebiil
-2
+1
 talk_to(cesar).                         (1)
 ebiil
-3
-hack(computer).                         (0)
+2
+talk_to(cesar).                         (0)

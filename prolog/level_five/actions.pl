@@ -4,7 +4,6 @@
 
 look_around :-
     current_level(5),
-    decrement_time_left(1),
     write("Walter: Let's find that keycard..."), nl,
     write("[The office is small. There are shelves and desk with computer on it]"), nl,
     !.
