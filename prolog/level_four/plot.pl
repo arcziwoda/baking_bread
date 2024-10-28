@@ -17,7 +17,7 @@ look_around :-
     !.
 
 
-go_to(door) :-
+go_to(office) :-
     current_level(4),
     lock_picked,
     start_level_five,

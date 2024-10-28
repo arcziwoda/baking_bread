@@ -28,7 +28,7 @@ move_pick(left).                        (8)
 move_pick(up).
 move_pick(right).
 move_pick(down).
-go_to(door).                            (7)
+go_to(office).                            (7)
 
 Level 5:
 look_around.                            (6)
