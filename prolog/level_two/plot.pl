@@ -34,7 +34,7 @@ go_to(lab) :-
     start_level_three,
     !.
 
-go_to(lab) :-
+go_to(storage) :-
     current_level(2),
     can_make_lockpick,
     decrement_time_left(1),

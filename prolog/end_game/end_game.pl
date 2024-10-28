@@ -24,7 +24,13 @@ check_player_won :-
             write("Walter: We did it, Jesse! We escaped just in time!"), nl,
             player_won
         ;
-            write("Walter: We should have taken this pepper spray!"), nl,
+        crowbar_found ->
+            write("Walter: Quick, Jesse! Use the crowbar to block the door!"), nl,
+            write("Jesse: Done! That should hold them off!"), nl,
+            write("[Walter and Jesse block the door and escape just in time!]"), nl,
+            player_won
+        ;
+            write("Walter: We should have taken something to defend ourselves!"), nl,
             write("Hank Schrader: You're under arrest!"), nl,
             write("[Hank arrests Walter and Jesse]"), nl,
             player_lost
@@ -40,7 +46,13 @@ check_player_won :-
             write("Walter: We did it, Jesse! We escaped just in time!"), nl, 
             player_won
         ;
-            write("Walter: We should have taken this pepper spray!"), nl,
+        crowbar_found ->
+            write("Walter: Jesse! Block the door with the crowbar, now!"), nl,
+            write("Jesse: Got it! That'll keep them out for a while."), nl,
+            write("[Walter and Jesse block the door and make their escape!]"), nl,
+            player_won
+        ;
+            write("Walter: We should have taken something to defend ourselves!"), nl,
             write("Jack Welker: You're dead meat!"), nl,
             write("[Jack shoots Walter and Jesse]"), nl,
             player_lost
