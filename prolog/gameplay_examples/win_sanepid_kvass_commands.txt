@@ -13,18 +13,22 @@ choose_path(jesse).                         (18)
 go_to(lab).                                 (17)
 
 Level 3:
-look_around.                                (16)
-add(kvass, whole_grain_bread).              (15)
-go_to(office_door).                         (14)
-take(pepper_spray).                         (12)
-use(kvass).                                 (11)
-go_to(office).                              (10)
+look_around.                                
+add(kvass, whole_grain_bread).              (16)
+go_to(office_door).                         (15)
+take(pepper_spray).                         (13)
+use(kvass).                                 (12)
+go_to(office).                              (11)
 
 Level 5:
-look_around.                                (9)
-search(desk).                               (8)
+look_around.
+search(desk).                               (10)
+hack(computer).                             (9)
+lalal
+talk_to(cesar).                             (8)
+ebiil
+3
 hack(computer).                             (7)
-hello
 go_to(main_door).                           (6)
 open(main_door).                            (5)
 997420

@@ -13,22 +13,22 @@ choose_path(jesse).                  (23)
 go_to(lab).                          (22)
 
 Level 3:
-look_around.                         (21)
-add(kvass, water).                   (20)
-go_to(office_door).                  (19)
-use(kvass).                          (15)
-go_to(office).                       (14)
+look_around.                         
+add(kvass, water).                   (21)
+go_to(office_door).                  (20)
+use(kvass).                          (16)
+go_to(office).                       (15)
 
 Level 5:
-look_around.                         (13)
-search(desk).                        (12)
-hack(computer).                      (11)
+look_around.
+search(desk).                        (14)
+hack(computer).                      (13)
 lalal
-talk_to(cesar).                      (10)
+talk_to(cesar).                      (12)
 ebiil
 3
-hack(computer).                      (9)
+hack(computer).                      (11)
 hello
-go_to(main_door).                    (8)
-open(main_door).                     (7)
+go_to(main_door).                    (10)
+open(main_door).                     (9)
 997420

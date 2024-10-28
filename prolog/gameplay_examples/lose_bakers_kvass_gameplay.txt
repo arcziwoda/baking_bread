@@ -2,7 +2,7 @@
 ---------------------------------------------
 Yo, here are the commands you can use, b****:
 1. talk_to(name?) - Yo, talk to this dude or dudette, keep the convo going, man!
-2. look_round - Yo, check out what you can see!
+2. look_around - Yo, check out what you can see!
 3. add(where?, what?) - Yo, add something to something, simple, got it?
 4. use(what?) - Yo, you can use something you have.
 5. go_to(where?) - Yo, go to a place, or somethin'.
@@ -105,23 +105,20 @@ Jesse: Aight, then maybe we could add something to make it stronger or go straig
 true.
 
 ?- look_around.
-
-<Remaining time: 21 minutes>
-
 Walter: What do we have here that could be useful...
 [sees some whole grain bread, water, and some yeast]
 true.
 
 ?- add(kvass, water).
 
-<Remaining time: 20 minutes>
+<Remaining time: 21 minutes>
 
 Jesse: Do you want to add anything else or we good to go?
 true.
 
 ?- go_to(office_door).
 
-<Remaining time: 19 minutes>
+<Remaining time: 20 minutes>
 
 Walter: Ok, the kvass is ready, now let's take it to the office's door.
 Jesse: Yo, I remember there was a pepper spray in the lab. Maybe we should take it?
@@ -130,7 +127,7 @@ true.
 
 ?- use(kvass).
 
-<Remaining time: 15 minutes>
+<Remaining time: 16 minutes>
 
 Jesse: Aight, now let's pour this bad boy on the lock!
 Walter: Here goes nothing...
@@ -141,22 +138,19 @@ true.
 
 ?- go_to(office).
 
-<Remaining time: 14 minutes>
+<Remaining time: 15 minutes>
 
 Jesse: Yessss, it worked Mr. Black, we're in!
 true.
 
 ?- look_around.
-
-<Remaining time: 13 minutes>
-
 Walter: Let's find that keycard...
 [The office is small. There are shelves and desk with computer on it]
 true.
 
 ?- search(desk).
 
-<Remaining time: 12 minutes>
+<Remaining time: 14 minutes>
 
 Walter: Found it!
 Jesse: That's the stuff, Mr. Black!
@@ -167,7 +161,7 @@ true.
 
 ?- hack(computer).
 
-<Remaining time: 11 minutes>
+<Remaining time: 13 minutes>
 
 The encrypted password is: ebiil
 Enter the decrypted password: 
@@ -179,7 +173,7 @@ true.
 
 ?- talk_to(cesar).
 
-<Remaining time: 10 minutes>
+<Remaining time: 12 minutes>
 
 Jesse: Let's see if Cesar picks up...
 Cesar: Hello?
@@ -195,7 +189,7 @@ true.
 
 ?- hack(computer).
 
-<Remaining time: 9 minutes>
+<Remaining time: 11 minutes>
 
 The encrypted password is: ebiil
 Enter the decrypted password: 
@@ -208,7 +202,7 @@ true.
 
 ?- go_to(main_door).
 
-<Remaining time: 8 minutes>
+<Remaining time: 10 minutes>
 
 Jesse: Finally Mr. Black, we are getting out of here!
 Jesse: Quick, use the keycard and enter the PIN code!
@@ -216,7 +210,7 @@ true.
 
 ?- open(main_door).
 
-<Remaining time: 7 minutes>
+<Remaining time: 9 minutes>
 
 [Walter swipes the keycard. The PIN prompt appears]
 Enter the PIN code: 
