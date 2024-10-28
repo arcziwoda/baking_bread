@@ -24,7 +24,7 @@ look_around.                         (13)
 search(desk).                        (12)
 hack(computer).                      (11)
 lalal
-talk_to(cesar)                       (10)
+talk_to(cesar).                      (10)
 ebiil
 3
 hack(computer).                      (9)

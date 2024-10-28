@@ -1,0 +1,232 @@
+### Game rules ###
+---------------------------------------------
+Yo, here are the commands you can use, b****:
+1. talk_to(name?) - Yo, talk to this dude or dudette, keep the convo going, man!
+2. look_round - Yo, check out what you can see!
+3. add(where?, what?) - Yo, add something to something, simple, got it?
+4. use(what?) - Yo, you can use something you have.
+5. go_to(where?) - Yo, go to a place, or somethin'.
+6. choose_path(name?) - Yo, sometimes you gotta choose who do you want to listen to.
+7. search(what?) - Yo, search for something, maybe you'll find something useful.
+8. hack(what?) - Yo, hack something, if you can.
+9. call(name?) - Yo, call someone, maybe they can help you.
+10. open(what?) - Yo, open something, if you can.
+11. create_pick(first tool, second tool) - Yo, one day you'll need a lockpick
+12. move_pick(direction?) - Yo, if you've crafted one, why not use it then?
+---------------------------------------------
+Type "help." to see this message again.
+
+### Introduction ###
+---------------------------------------------
+Welcome to Baking B(re)ad: The Lab Escape!
+You are Walter Black, a brilliant baker working in Sus' bakery.
+The bakery is not legal so you work in a secret lab under the laundromat.
+You are famous for your blue crystal muffins.
+Your partner, known as Jesse Yellowman, is with you.
+He is not as smart as you, but he is loyal and can help you.
+Anytime you are lost, type "help", and Jesse will remind you of the commands you can use.
+After a botched deal, your situation has become dire.
+You feel like one mistake could be your last.
+After a long day of work it is time to add the last ingredient to your product.
+Good luck!
+---------------------------------------------
+Type "play." to start the game.
+
+true.
+
+?- play.
+Walter: Yo, Jesse, you there?
+Jesse: Yeah, Mr. Black, what's up?
+Walter: It's been a rough day, huh?
+Jesse: You bet. These "Blue muffins" are no joke.
+Walter: We need to finish them up.
+true.
+
+?- talk_to(jesse).
+Jesse: Man, I never thought baking could be this intense.
+Walter: It's all about precision, Jesse. One wrong move and it's all over.
+Jesse: Yeah, yeah, I get it. But these muffins... they're something else.
+Walter: They have to be perfect. Our reputation depends on it.
+Jesse: Yo, Mr. Black, what's the final ingredient for the cake?
+Jesse: I totally forgot, man. Maybe you should look around to see what's on the table.
+true.
+
+?- look_around.
+Walter: Let's see what's on the table...
+[sees sugar, blue food coloring, baking soda and los pollos hermanos sauce]
+true.
+
+?- add(muffins, blue_food_coloring).
+Walter: That's it! The final ingredient for the muffins is blue_food_coloring!
+Jesse: Yo, Mr. Black! These muffins are gonna be tight!
+Walter: Yes, Jesse. Now let's finish these muffins and move on.
+[The phone rings]
+Jesse: Yo, Mr. Black! It's Saul! Better pick that up!
+true.
+
+?- talk_to(saul).
+Saul Badman: Hey, Walter! It's Saul. Listen, the rival bakers are on their way. You gotta get outta there, man!
+Walter: Damn it, Saul! How much time do we have?
+Saul Badman: Not much, maybe a few minutes. You need to move!
+Jesse: Yo, Mr. Black, this is bad. What do we do?
+Walter: We need to get to the main door, Jesse. Now!
+Jesse: Alright, let's go!
+
+<Remaining time: 25 minutes>
+
+true.
+
+?- go_to(main_door).
+
+<Remaining time: 24 minutes>
+
+Jesse: Yo, the door won't open!
+Walter: Damn it, it can only be unlocked by a key card. I think it's locked in Sus' office.
+Jesse: And how do we get there?
+Walter: We don't have the key, but we could try to pick the lock.
+Jesse: I ain't no locksmith, we should use some Kvass to melt the lock.
+Walter: We have to pick one of the options, we don't have much time left!
+true.
+
+?- choose_path(jesse).
+
+<Remaining time: 23 minutes>
+
+Jesse: Yo, Mr. Black, we gotta go back to the lab to make the Kvass, let's go!
+true.
+
+?- go_to(lab).
+
+<Remaining time: 22 minutes>
+
+Jesse: I think we have some leftover Kvass from the last batch of bread.
+Watler: Yes, over there, but it's pretty weak, it won't dissolve the lock quickly.
+Jesse: Aight, then maybe we could add something to make it stronger or go straight to the office door and use it.
+true.
+
+?- look_around.
+
+<Remaining time: 21 minutes>
+
+Walter: What do we have here that could be useful...
+[sees some whole grain bread, water, and some yeast]
+true.
+
+?- add(kvass, water).
+
+<Remaining time: 20 minutes>
+
+Jesse: Do you want to add anything else or we good to go?
+true.
+
+?- go_to(office_door).
+
+<Remaining time: 19 minutes>
+
+Walter: Ok, the kvass is ready, now let's take it to the office's door.
+Jesse: Yo, I remember there was a pepper spray in the lab. Maybe we should take it?
+Walter: I don't know Jesse, it will take some time to find it...
+true.
+
+?- use(kvass).
+
+<Remaining time: 15 minutes>
+
+Jesse: Aight, now let's pour this bad boy on the lock!
+Walter: Here goes nothing...
+<It took 4 minutes to dissolve the lock.>
+
+[Office door slowly opens]
+true.
+
+?- go_to(office).
+
+<Remaining time: 14 minutes>
+
+Jesse: Yessss, it worked Mr. Black, we're in!
+true.
+
+?- look_around.
+
+<Remaining time: 13 minutes>
+
+Walter: Let's find that keycard...
+[The office is small. There are shelves and desk with computer on it]
+true.
+
+?- search(desk).
+
+<Remaining time: 12 minutes>
+
+Walter: Found it!
+Jesse: That's the stuff, Mr. Black!
+[Reads the keycard: In order to open the main door you need to provide the PIN code]
+Walter: Damn it Jesse, we need to hack the computer to get the PIN code!
+Jesse: Let's do it!
+true.
+
+?- hack(computer).
+
+<Remaining time: 11 minutes>
+
+The encrypted password is: ebiil
+Enter the decrypted password: 
+|: lalal
+Walter: Wrong password!
+Jesse: My friend Cesar can help us with that task!
+Jesse: Just call him and tell him the encryption with your shift guess!
+true.
+
+?- talk_to(cesar).
+
+<Remaining time: 10 minutes>
+
+Jesse: Let's see if Cesar picks up...
+Cesar: Hello?
+Jesse: Yo Cesar, it's Jesse, I don't have time to explain, but can you help us encrypt a computer password?
+Cesar: Um... sure, what's the decrypted password?
+|: ebiil
+Jesse: The encrypted password is ebiil.
+Cesar: Alright, now I need you to tell me by how much to shift the letters.
+|: 3
+Jesse: Eee... I don't know, but maybe 3.
+Cesar: ebiil shifted by 3 characters is hello
+true.
+
+?- hack(computer).
+
+<Remaining time: 9 minutes>
+
+The encrypted password is: ebiil
+Enter the decrypted password: 
+|: hello
+Walter: We did it!
+Jesse: Yeah, science!
+[The computer displays the PIN code: 997420]
+Walter: Let's go to the main door and get out of here!
+true.
+
+?- go_to(main_door).
+
+<Remaining time: 8 minutes>
+
+Jesse: Finally Mr. Black, we are getting out of here!
+Jesse: Quick, use the keycard and enter the PIN code!
+true.
+
+?- open(main_door).
+
+<Remaining time: 7 minutes>
+
+[Walter swipes the keycard. The PIN prompt appears]
+Enter the PIN code: 
+|: 997420
+[The main door opens]
+[Walter and Jesse didn't escape in time and the bakers made it to the lab]
+Jack Welker: We got you now!
+Walter: We should have taken this pepper spray!
+Jack Welker: You're dead meat!
+[Jack shoots Walter and Jesse]
+==============================================
+                  YOU LOST                    
+==============================================

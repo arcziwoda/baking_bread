@@ -60,12 +60,10 @@ player_won :-
     write("=============================================="), nl,
     write("                  YOU WON                     "), nl,
     write("=============================================="), nl,
-    % halt. <- commented out for test purposes
-    !.
+    halt.
 
 player_lost :-
     write("=============================================="), nl,
     write("                  YOU LOST                    "), nl,
     write("=============================================="), nl,
-    % halt. <- commented out for test purposes
-    !.
+    halt.
