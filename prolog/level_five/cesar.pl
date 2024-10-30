@@ -16,8 +16,8 @@ talk_to(cesar) :-
     decrement_time_left(1),
     write("Jesse: Let's see if Cesar picks up..."), nl,
     write("Cesar: Hello?"), nl,
-    write("Jesse: Yo Cesar, it's Jesse, I don't have time to explain, but can you help us encrypt a computer password?"), nl,
-    write("Cesar: Um... sure, what's the decrypted password?"), nl,
+    write("Jesse: Yo Cesar, it's Jesse, I don't have time to explain, but can you help us decrypt a computer password?"), nl,
+    write("Cesar: Um... sure, what's the encrypted password?"), nl,
     read_string(user_input, "\n", "", _, String),
     write("Jesse: The encrypted password is "), write(String), write("."), nl,
     write("Cesar: Alright, now I need you to tell me by how much to shift the letters."), nl,
@@ -27,4 +27,4 @@ talk_to(cesar) :-
     string_chars(String, Chars),
     caesar_encrypt(Chars, Shift, EncryptedChars),
     string_chars(EncryptedString, EncryptedChars),
-    write("Cesar: "), write(String), write(" shifted by "), write(Shift), write(" characters is "), write(EncryptedString), nl.
+    write("Cesar: "), write(String), write(" shifted by "), write(Shift), write(" is "), write(EncryptedString), write("."), nl.

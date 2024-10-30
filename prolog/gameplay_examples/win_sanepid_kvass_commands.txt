@@ -30,5 +30,5 @@ ebiil
 3
 hack(computer).                             (7)
 go_to(main_door).                           (6)
-open(main_door).                            (5)
+use(keycard).                               (5)
 997420

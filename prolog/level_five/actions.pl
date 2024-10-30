@@ -61,7 +61,7 @@ go_to(main_door) :-
     write("Jesse: Quick, use the keycard and enter the PIN code!"), nl,
     !.
 
-open(main_door) :-
+use(keycard) :-
     current_level(5),
     has_keycard,
     has_PIN_code,

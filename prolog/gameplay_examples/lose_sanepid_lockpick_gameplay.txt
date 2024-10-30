@@ -40,15 +40,6 @@ Jesse: You bet. These blue muffins are no joke.
 Walter: We need to finish them up.
 true.
 
-?- talk_to(jesse).
-Jesse: Man, I never thought baking could be this intense.
-Walter: It's all about precision, Jesse. One wrong move and it's all over.
-Jesse: Yeah, yeah, I get it. But these muffins... they're something else.
-Walter: They have to be perfect. Our reputation depends on it.
-Jesse: Yo, Mr. Black, what's the final ingredient for the cake?
-Jesse: I totally forgot, man. Maybe you should look around to see what's on the table.
-true.
-
 ?- look_around.
 Walter: Let's see what's on the table...
 [sees sugar, blue food coloring, baking soda and los pollos hermanos sauce]
@@ -61,7 +52,7 @@ Jesse: The sanepid will come soon, they will know about the secret bakery!
 Jesse: Yo, Mr. Black! It's Saul! Better pick that up!
 true.
 
-?- talk_to(saul).
+?- talk_to(saul).  
 Saul Badman: Hey, genius! What did you do? The sanepid is coming! You better run!
 Walter: Damn it, Saul. How much time do we have?
 Saul Badman: Not much, Walter. You need to get out of there, fast!
@@ -73,7 +64,7 @@ Jesse: Got it, let's get outta here!
 
 true.
 
-?- go_to(main_door).
+?- go_to(main_door). 
 
 <Remaining time: 19 minutes>
 
@@ -85,65 +76,129 @@ Jesse: I ain't no locksmith, we should use some Kvass to melt the lock.
 Walter: We have to pick one of the options, we don't have much time left!
 true.
 
-?- choose_path(jesse).
+?- choose_path(walter). 
 
 <Remaining time: 18 minutes>
 
-Jesse: Yo, Mr. Black, we gotta go back to the lab to make the Kvass, let's go!
+Walter: We should be able to make the lockpick out of some scraps left in the storage. Follow me.
 true.
 
-?- go_to(lab).
+?- go_to(storage).     
 
 <Remaining time: 17 minutes>
 
-Jesse: I think we have some leftover Kvass from the last batch of bread.
-Watler: Yes, over there, but it's pretty weak, it won't dissolve the lock quickly.
-Jesse: Aight, then maybe we could add something to make it stronger or go straight to the office door and use it.
+Jesse: We need to find tools for making a lockpick!
+Walter: Or we could try to find a crowbar somewhere.
 true.
 
 ?- look_around.
-Walter: What do we have here that could be useful...
-[sees some whole grain bread, water, and some yeast]
+Walter: Let's see what we can find here...
+[sees some metal wires, a screwdriver, a hammer, and a wrench]
+Walter: These tools could help us make a lockpick. I belive it is made from two things.
+[sees a hatch, a tool cabinet, a metal barrel, and a dumpster]
+Walter: We could search these places for the crowbar.
 true.
 
-?- add(kvass, whole_grain_bread).
-
-<Remaining time: 16 minutes>
-
-Jesse: Do you want to add anything else or we good to go?
-true.
-
-?- go_to(office_door).
+?- create_pick(metal_wires, screwdriver).
 
 <Remaining time: 15 minutes>
 
-Walter: Ok, the kvass is ready, now let's take it to the office's door.
-Jesse: Yo, I remember there was a pepper spray in the lab. Maybe we should take it?
-Walter: I don't know Jesse, it will take some time to find it...
+Walter: Damn, that didn't work. We're wasting time!
 true.
 
-?- take(pepper_spray).
+?- create_pick(screwdriver, hammer). 
 
-<Remaining time: 18 minutes>
+<Remaining time: 13 minutes>
 
-Jesse: Yo Mr. Black, there's still some left in the can, this might come in handy later...
-Walter: Great, now let's use the Kvass, we don't have time, remember?
+Walter: Damn, that didn't work. We're wasting time!
 true.
 
-?- use(kvass).
+?- create_pick(metal_wires, hammer).
+Walter: Perfect! Now we have to get back to the office door.
+true.
+
+?- search(hatch). 
 
 <Remaining time: 12 minutes>
 
-Jesse: Aight, now let's pour this bad boy on the lock!
-Walter: Here goes nothing...
-<It took 1 minute to dissolve the lock.>
+Walter: No luck here. Let's keep searching.
+true.
 
+?- search(dumpster).  
+
+<Remaining time: 11 minutes>
+
+Walter: No luck here. Let's keep searching.
+true.
+
+?- go_to(office_door). 
+
+<Remaining time: 10 minutes>
+
+Jesse: How do we use it now?
+Walter: We just have to try and hope for the best.
+true.
+
+?- use(lockpick).
+Walter: Alright, let's try to pick the lock.
+Walter: We need to move the pick carefully: up, down, left, or right.
+Walter: If we make a mistake, we'll have to start over.
+true.
+
+?- move_pick(up).
+Walter: Keep going, the lock is almost there!
+true.
+
+?- move_pick(up). 
+Walter: Damn, that was the wrong move. We lost some time!
+
+<Remaining time: 9 minutes>
+
+Walter: We need to move the pick carefully: up, down, left, or right.
+Walter: If we make a mistake, we'll have to start over.
+true.
+
+?- move_pick(down).
+Walter: Damn, that was the wrong move. We lost some time!
+
+<Remaining time: 8 minutes>
+
+Walter: We need to move the pick carefully: up, down, left, or right.
+Walter: If we make a mistake, we'll have to start over.
+true.
+
+?- move_pick(up).
+Walter: Keep going, the lock is almost there!
+true.
+
+?- move_pick(down). 
+Walter: Damn, that was the wrong move. We lost some time!
+
+<Remaining time: 7 minutes>
+
+Walter: We need to move the pick carefully: up, down, left, or right.
+Walter: If we make a mistake, we'll have to start over.
+true.
+
+?- move_pick(up).  
+Walter: Keep going, the lock is almost there!
+true.
+
+?- move_pick(right).
+Walter: Keep going, the lock is almost there!
+true.
+
+?- move_pick(down). 
+
+<Remaining time: 6 minutes>
+
+Walter: We did it! The lock is open!
 [Office door slowly opens]
 true.
 
 ?- go_to(office).
 
-<Remaining time: 11 minutes>
+<Remaining time: 5 minutes>
 
 Jesse: Yessss, it worked Mr. Black, we're in!
 true.
@@ -153,9 +208,9 @@ Walter: Let's find that keycard...
 [The office is small. There are shelves and desk with computer on it]
 true.
 
-?- search(desk).
+?- search(desk).  
 
-<Remaining time: 10 minutes>
+<Remaining time: 4 minutes>
 
 Walter: Found it!
 Jesse: That's the stuff, Mr. Black!
@@ -164,21 +219,21 @@ Walter: Damn it Jesse, we need to hack the computer to get the PIN code!
 Jesse: Let's do it!
 true.
 
-?- hack(computer). 
+?- hack(computer).
 
-<Remaining time: 9 minutes>
+<Remaining time: 3 minutes>
 
 The encrypted password is: ebiil
 Enter the decrypted password: 
-|: lalal
+|: abcde
 Walter: Wrong password!
 Jesse: My friend Cesar can help us with that task!
 Jesse: Just call him and tell him the encryption with your shift guess!
 true.
 
-?- talk_to(cesar).  
+?- talk_to(cesar). 
 
-<Remaining time: 8 minutes>
+<Remaining time: 2 minutes>
 
 Jesse: Let's see if Cesar picks up...
 Cesar: Hello?
@@ -187,54 +242,33 @@ Cesar: Um... sure, what's the encrypted password?
 |: ebiil
 Jesse: The encrypted password is ebiil.
 Cesar: Alright, now I need you to tell me by how much to shift the letters.
-|: 3
-Jesse: Eee... I don't know, but maybe 3.
-Cesar: ebiil shifted by 3 is hello.
+|: 1
+Jesse: Eee... I don't know, but maybe 1.
+Cesar: ebiil shifted by 1 is fcjjm
 true.
 
-?- hack(computer).
+?- talk_to(cesar).
 
-<Remaining time: 7 minutes>
+<Remaining time: 1 minutes>
 
-The encrypted password is: ebiil
-Enter the decrypted password: 
-|: hello
-Walter: We did it!
-Jesse: Yeah, science!
-[The computer displays the PIN code: 997420]
-Walter: Let's go to the main door and get out of here!
+Jesse: Let's see if Cesar picks up...
+Cesar: Hello?
+Jesse: Yo Cesar, it's Jesse, I don't have time to explain, but can you help us decrypt a computer password?
+Cesar: Um... sure, what's the encrypted password?
+|: ebiil
+Jesse: The encrypted password is ebiil.
+Cesar: Alright, now I need you to tell me by how much to shift the letters.
+|: 2
+Jesse: Eee... I don't know, but maybe 2.
+Cesar: ebiil shifted by 2 is gdkkn
 true.
 
-?- go_to(main_door).
-
-<Remaining time: 6 minutes>
-
-Jesse: Finally Mr. Black, we are getting out of here!
-Jesse: Quick, use the keycard and enter the PIN code!
-true.
-
-?- use(keycard).
-
-<Remaining time: 5 minutes>
-
-[Walter swipes the keycard. The PIN prompt appears]
-Enter the PIN code: 
-|: 997420
-[The main door opens]
+?- talk_to(cesar).
 [Walter and Jesse didn't escape in time and the sanepid inspector made it to the lab]
 Hank Schrader: Sanepid inspection! Get out of there now!
-Walter: Quick, Jesse! Use the pepper spray!
-Jesse: Take this, Hank!
-[Hank is knocked out by the pepper spray]
-Walter: We did it, Jesse! We escaped just in time!
-[Walter and Jesse exit the lab]
-Jesse: Yesssss! Hell yeah! Ey c'mon baby. C'mon yes!
-[Jesse awaits Walter to give him a high five]
-[Walter gives jesse high five]
-Walter: Ahhhhh!
-Jesse: Ahhhhh!
-Jesse: Du'uh!
-Walter: Let's get out of here!
+Walter: We should have taken this pepper spray!
+Hank Schrader: You're under arrest!
+[Hank arrests Walter and Jesse]
 ==============================================
-                  YOU WON                     
+                  YOU LOST                    
 ==============================================

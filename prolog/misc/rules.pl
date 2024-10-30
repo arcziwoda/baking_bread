@@ -11,9 +11,8 @@ help :-
     write("6. choose_path(name?) - Yo, sometimes you gotta choose who do you want to listen to."), nl,
     write("7. search(what?) - Yo, search for something, maybe you'll find something useful."), nl,
     write("8. hack(what?) - Yo, hack something, if you can."), nl,
-    write("9. open(what?) - Yo, open something, if you can."), nl,
-    write("10. create_pick(first tool, second tool) - Yo, one day you'll need a lockpick"), nl,
-    write("11. move_pick(direction?) - Yo, if you've crafted one, why not use it then?"), nl,
+    write("9. create_pick(first tool, second tool) - Yo, one day you'll need a lockpick"), nl,
+    write("10. move_pick(direction?) - Yo, if you've crafted one, why not use it then?"), nl,
     write("---------------------------------------------"), nl,
     write("Type \"help.\" to see this message again."), nl,
     write(""), nl.
