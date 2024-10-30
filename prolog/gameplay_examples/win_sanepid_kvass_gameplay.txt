@@ -37,7 +37,7 @@ true.
 Walter: Yo, Jesse, you there?
 Jesse: Yeah, Mr. Black, what's up?
 Walter: It's been a rough day, huh?
-Jesse: You bet. These "Blue muffins" are no joke.
+Jesse: You bet. These blue muffins are no joke.
 Walter: We need to finish them up.
 true.
 

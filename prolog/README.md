@@ -69,7 +69,7 @@ true.
 ```
 
 ### 4. Quitting the Game:
-To exit the game, type `quit` when prompted for your action.
+To exit the game, type `quit.` when prompted for your action.
 
 ## Development
 This project is written entirely in **Prolog** as part of an assignment for PARP lecture. The goal is to demonstrate how logical rules and game states can be modeled using Prolog’s rule-based structure.
