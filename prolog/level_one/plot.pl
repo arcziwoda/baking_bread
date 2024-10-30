@@ -8,7 +8,7 @@ start_level_one :-
     write("Walter: Yo, Jesse, you there?"), nl,
     write("Jesse: Yeah, Mr. Black, what's up?"), nl,
     write("Walter: It's been a rough day, huh?"), nl,
-    write("Jesse: You bet. These \"Blue muffins\" are no joke."), nl,
+    write("Jesse: You bet. These blue muffins are no joke."), nl,
     write("Walter: We need to finish them up."), nl,
     !.
 

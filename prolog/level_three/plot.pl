@@ -18,7 +18,7 @@ go_to(office_door) :-
 
     decrement_time_left(1),
     assert(by_the_door),
-    write("Walter: Ok, the kvass is ready, now let's take it to the office's door."), nl,
+    write("Walter: Ok, the Kvass is ready, now let's take it to the office's door."), nl,
     write("Jesse: Yo, I remember there was a pepper spray in the lab. Maybe we should take it?"), nl,
     write("Walter: I don't know Jesse, it will take some time to find it..."), nl,
     !.
@@ -30,6 +30,7 @@ take(pepper_spray) :-
     decrement_time_left(2),
     assert(pepper_spray),
     write("Jesse: Yo Mr. Black, there's still some left in the can, this might come in handy later..."), nl,
+    write("Walter: Great, now let's use the Kvass, we don't have time, remember?"), nl,
     !.
 
 %User uses kvass on the door lock

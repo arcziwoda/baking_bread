@@ -2,7 +2,7 @@
 help :-
     write("### Game rules ###"), nl,
     write("---------------------------------------------"), nl,
-    write("Yo, here are the commands you can use, b****:"), nl,
+    write("Yo, here are the commands you can use:"), nl,
     write("1. talk_to(name?) - Yo, talk to this dude or dudette, keep the convo going, man!"), nl,
     write("2. look_around - Yo, check out what you can see!"), nl,
     write("3. add(where?, what?) - Yo, add something to something, simple, got it?"), nl,
@@ -11,10 +11,9 @@ help :-
     write("6. choose_path(name?) - Yo, sometimes you gotta choose who do you want to listen to."), nl,
     write("7. search(what?) - Yo, search for something, maybe you'll find something useful."), nl,
     write("8. hack(what?) - Yo, hack something, if you can."), nl,
-    write("9. call(name?) - Yo, call someone, maybe they can help you."), nl,
-    write("10. open(what?) - Yo, open something, if you can."), nl,
-    write("11. create_pick(first tool, second tool) - Yo, one day you'll need a lockpick"), nl,
-    write("12. move_pick(direction?) - Yo, if you've crafted one, why not use it then?"), nl,
+    write("9. open(what?) - Yo, open something, if you can."), nl,
+    write("10. create_pick(first tool, second tool) - Yo, one day you'll need a lockpick"), nl,
+    write("11. move_pick(direction?) - Yo, if you've crafted one, why not use it then?"), nl,
     write("---------------------------------------------"), nl,
     write("Type \"help.\" to see this message again."), nl,
     write(""), nl.

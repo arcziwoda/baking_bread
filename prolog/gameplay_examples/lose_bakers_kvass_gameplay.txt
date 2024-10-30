@@ -1,6 +1,6 @@
 ### Game rules ###
 ---------------------------------------------
-Yo, here are the commands you can use, b****:
+Yo, here are the commands you can use:
 1. talk_to(name?) - Yo, talk to this dude or dudette, keep the convo going, man!
 2. look_around - Yo, check out what you can see!
 3. add(where?, what?) - Yo, add something to something, simple, got it?
@@ -9,10 +9,9 @@ Yo, here are the commands you can use, b****:
 6. choose_path(name?) - Yo, sometimes you gotta choose who do you want to listen to.
 7. search(what?) - Yo, search for something, maybe you'll find something useful.
 8. hack(what?) - Yo, hack something, if you can.
-9. call(name?) - Yo, call someone, maybe they can help you.
-10. open(what?) - Yo, open something, if you can.
-11. create_pick(first tool, second tool) - Yo, one day you'll need a lockpick
-12. move_pick(direction?) - Yo, if you've crafted one, why not use it then?
+9. open(what?) - Yo, open something, if you can.
+10. create_pick(first tool, second tool) - Yo, one day you'll need a lockpick
+11. move_pick(direction?) - Yo, if you've crafted one, why not use it then?
 ---------------------------------------------
 Type "help." to see this message again.
 
@@ -20,11 +19,11 @@ Type "help." to see this message again.
 ---------------------------------------------
 Welcome to Baking B(re)ad: The Lab Escape!
 You are Walter Black, a brilliant baker working in Sus' bakery.
-The bakery is not legal so you work in a secret lab under the laundromat.
-You are famous for your blue crystal muffins.
+You work in a secret lab under the laundromat.
+You are famous for your signature blue muffins, which rival bakers envy.
 Your partner, known as Jesse Yellowman, is with you.
 He is not as smart as you, but he is loyal and can help you.
-Anytime you are lost, type "help", and Jesse will remind you of the commands you can use.
+If you type "help" Jesse will remind you of the possible commands.
 After a botched deal, your situation has become dire.
 You feel like one mistake could be your last.
 After a long day of work it is time to add the last ingredient to your product.
