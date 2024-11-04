@@ -35,7 +35,7 @@ To start playing, build and run the game with the following commands:
 
 ```bash
 cabal build
-cabal run
+cabal run haskell
 ```
 
 Upon starting, you’ll be presented with a description of your surroundings and a set of possible actions. Type your action and press Enter to advance.

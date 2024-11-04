@@ -1,13 +1,15 @@
--- Main.hs
 module Main where
 
 import Game ( GameState, Command(..), initialState )
-import Commands ( executeCommand )
+import Commands ( executeCommand, printIntroduction )
 import System.IO (hFlush, stdout)
 
 main :: IO ()
 main = do
     putStrLn "Welcome to Baking B(re)ad: The Lab Escape!"
+    printIntroduction
+    putStr "Type \"help\" to see the game rules.\n"
+    putStr "Type \"start\" to begin the game.\n"
     gameLoop initialState
 
 gameLoop :: GameState -> IO ()
@@ -23,16 +25,7 @@ gameLoop state = do
 
 parseCommand :: String -> Command
 parseCommand input = case words input of
-    ("talk_to":name:_) -> TalkTo name
-    ["look_around"] -> LookAround
-    ("add":location:what:_) -> Add location what
-    ("use":what:_) -> Use what
-    ("go_to":destination:_) -> GoTo destination
-    ("choose_path":name:_) -> ChoosePath name
-    ("search":what:_) -> Search what
-    ("hack":what:_) -> Hack what
-    ("create_pick":tool1:tool2:_) -> CreatePick tool1 tool2
-    ("move_pick":direction:_) -> MovePick direction
     ["help"] -> Help
     ["quit"] -> Quit
+    ["start"] -> Start
     _ -> Help
