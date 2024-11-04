@@ -1,7 +1,3 @@
-Here’s an adapted README for your game in Haskell:
-
----
-
 # Baking B(re)ad: The Lab Escape (Haskell Adventure Game)
 
 **Baking B(re)ad: The Lab Escape** is a text-based adventure game where you play as a chemistry teacher turned baker who is trapped in their secret bread lab. Your objective is to navigate through the perilous lab, avoid traps, use your bakery skills to solve puzzles, and escape before authorities or rival bakers find you.
