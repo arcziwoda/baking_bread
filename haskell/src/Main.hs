@@ -28,4 +28,8 @@ parseCommand input = case words input of
     ["help"] -> Help
     ["quit"] -> Quit
     ["start"] -> Start
+    ["talk_to", name] -> TalkTo name
+    ["look_around"] -> LookAround
+    ["add", where_, what] -> Add where_ what
+    ["go_to", where_] -> GoTo where_
     _ -> Help

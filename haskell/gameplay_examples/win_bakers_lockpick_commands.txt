@@ -1,0 +1,46 @@
+start.
+play.
+
+Level 1:
+look_around.
+add(muffins, blue_food_coloring).
+talk_to(saul).                          (25)
+go_to(main_door).                       (24)
+
+Level 2:
+choose_path(walter).                    (23)
+go_to(storage).                         (22)
+
+Level 4:
+look_around.
+search(tool_cabinet).                   (21)
+search(hatch).                          (20)
+search(metal_barrel).                   (19)
+create_pick(screwdriver, hammer).       (17)
+create_pick(metal_wires, hammer).
+go_to(office_door).                     (16)
+use(lockpick).
+move_pick(down).                        (15)
+move_pick(up).
+move_pick(down).                        (14)
+move_pick(up).
+move_pick(right).
+move_pick(down).                        (13)
+go_to(office).                          (12)
+
+Level 5:
+look_around.                            
+search(desk).                           (11)
+hack(computer).
+abcde                                   (10)
+talk_to(cesar).                         (9)
+ebiil
+1
+talk_to(cesar).                         (8)
+ebiil
+3
+hack(computer).                         (7)
+hello
+go_to(main_door).                       (6)
+use(keycard).                           (5)
+997420

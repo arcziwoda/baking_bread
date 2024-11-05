@@ -16,7 +16,7 @@ cabal-version:       >=1.10
 
 executable haskell
   main-is:             Main.hs
-  hs-source-dirs:      src, src/level_one
+  hs-source-dirs:      src
   other-modules:       Commands, Game, LevelOne
   build-depends:       base >=4.12 && <4.13
   hs-source-dirs:      src
