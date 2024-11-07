@@ -18,6 +18,6 @@ executable haskell
   main-is:             Main.hs
   hs-source-dirs:      src
   other-modules:       Commands, Game, LevelOne
-  build-depends:       base >=4.12 && <4.13
+  build-depends:       base >=4.12
   hs-source-dirs:      src
   default-language:    Haskell2010
