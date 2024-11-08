@@ -7,7 +7,8 @@ module LevelOne (
     goToMainDoor
 ) where
 
-import Game (GameState, canUseMainDoor, timeLeft, muffinsDone, bakersAreComing, sanepidIsComing, currentLevel)
+import Game (GameState, currentLevel, timeLeft, canUseMainDoor, muffinsDone, bakersAreComing, sanepidIsComing)
+import LevelTwo (startLevelTwo)
 
 startLevelOne :: IO ()
 startLevelOne = do
@@ -83,7 +84,7 @@ goToMainDoor :: GameState -> IO GameState
 goToMainDoor state
     | canUseMainDoor state = do
         putStrLn "Moving to Level Two..."
-        -- Here you would call the function to start Level Two
+        startLevelTwo
         return state { currentLevel = 2 }
     | otherwise = do
         putStrLn "Walter: We can't use the main door yet!"

@@ -2,6 +2,7 @@ module Commands where
 
 import Game
 import LevelOne (startLevelOne, talkToJesse, talkToSaul, lookAround, addIngredient, goToMainDoor)
+import LevelTwo (choosePathJesse, choosePathWalter)
 
 printIntroduction :: IO ()
 printIntroduction = do
@@ -50,6 +51,8 @@ executeCommand (TalkTo "saul") state = talkToSaul state
 executeCommand LookAround state = lookAround state
 executeCommand (Add where_ what) state = addIngredient where_ what state
 executeCommand (GoTo "main_door") state = goToMainDoor state
+executeCommand (ChoosePath "jesse") state = choosePathJesse state
+executeCommand (ChoosePath "walter") state = choosePathWalter state
 
 executeCommand _ state = do
     putStrLn "Unknown command."
