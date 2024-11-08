@@ -16,11 +16,15 @@ startLevelTwo = do
     putStrLn "Walter: We have to pick one of the options, we don't have much time left!"
 
 choosePathJesse :: GameState -> IO GameState
-choosePathJesse state = do
-    putStrLn "Jesse: Yo, Mr. Black, we gotta go back to the lab to make the Kvass, let's go!"
-    return state { canMakeKvass = True }
+choosePathJesse state
+    | currentLevel state /= 2 = return state
+    | otherwise = do
+        putStrLn "Jesse: Yo, Mr. Black, we gotta go back to the lab to make the Kvass, let's go!"
+        return state { canMakeKvass = True }
 
 choosePathWalter :: GameState -> IO GameState
-choosePathWalter state = do
-    putStrLn "Walter: We should be able to make the lockpick out of some scraps left in the storage. Follow me."
-    return state { canMakeLockpick = True }
+choosePathWalter state
+    | currentLevel state /= 2 = return state
+    | otherwise = do
+        putStrLn "Walter: We should be able to make the lockpick out of some scraps left in the storage. Follow me."
+        return state { canMakeLockpick = True }
