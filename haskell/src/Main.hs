@@ -27,7 +27,6 @@ gameLoop state = do
         then putStrLn "Game Over"
         else gameLoop newState
 
-
 decrementTime :: Command -> GameState -> GameState
 decrementTime command state
     | timeLeft state > 0 =

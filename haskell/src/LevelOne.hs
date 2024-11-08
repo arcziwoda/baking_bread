@@ -95,7 +95,6 @@ goToMainDoor state
     | currentLevel state /= 1 = return state
     | otherwise = case () of
         _ | canUseMainDoor state -> do
-            putStrLn "Moving to Level Two..."
             startLevelTwo
             return state { currentLevel = 2 }
           | otherwise -> do

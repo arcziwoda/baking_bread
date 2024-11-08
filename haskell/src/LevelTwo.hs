@@ -1,7 +1,9 @@
 module LevelTwo (
     startLevelTwo,
     choosePathJesse,
-    choosePathWalter
+    choosePathWalter,
+    goToLab,
+    goToStorage
 ) where
 
 import Game(GameState, currentLevel, timeLeft, bakersAreComing, sanepidIsComing, canMakeKvass, canMakeLockpick)
@@ -28,3 +30,25 @@ choosePathWalter state
     | otherwise = do
         putStrLn "Walter: We should be able to make the lockpick out of some scraps left in the storage. Follow me."
         return state { canMakeLockpick = True }
+
+goToLab :: GameState -> IO GameState
+goToLab state
+    | currentLevel state /= 2 = return state
+    | otherwise = case () of
+        _ | canMakeKvass state -> do
+            --TODO startLevelThree
+            return state { currentLevel = 3 }
+          | otherwise -> do
+            putStrLn "Jesse: You can't got to the lab right now!"
+            return state
+
+goToStorage :: GameState -> IO GameState
+goToStorage state
+    | currentLevel state /= 2 = return state
+    | otherwise = case () of
+        _ | canMakeLockpick state -> do
+            --TODO startLevelFour
+            return state {currentLevel = 4}
+          | otherwise -> do
+            putStrLn "Walter: Why should we go to the storage room right now?"
+            return state
