@@ -1,7 +1,7 @@
 module Main where
 
-import Game ( GameState(..), Command(..), initialState )
-import Commands ( executeCommand, printIntroduction )
+import Commands (executeCommand, printIntroduction)
+import Game (Command (..), GameState (..), initialState)
 import System.IO (hFlush, stdout)
 
 main :: IO ()
@@ -33,7 +33,7 @@ decrementTime command state
         let decrementValue = case command of
                 LookAround -> 0
                 _ -> 1
-        in state { timeLeft = timeLeft state - decrementValue }
+         in state{timeLeft = timeLeft state - decrementValue}
     | otherwise = state
 
 parseCommand :: String -> Command
@@ -46,4 +46,7 @@ parseCommand input = case words input of
     ["add", where_, what] -> Add where_ what
     ["go_to", where_] -> GoTo where_
     ["choose_path", name] -> ChoosePath name
+    ["search", where_] -> Search where_
+    ["use", what] -> Use what
+    ["create_pick", tool1, tool2] -> CreatePick tool1 tool2
     _ -> Help

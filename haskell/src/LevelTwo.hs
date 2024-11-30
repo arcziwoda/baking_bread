@@ -3,10 +3,12 @@ module LevelTwo (
     choosePathJesse,
     choosePathWalter,
     goToLab,
-    goToStorage
+    goToStorage,
 ) where
 
-import Game(GameState, currentLevel, timeLeft, bakersAreComing, sanepidIsComing, canMakeKvass, canMakeLockpick)
+import Game (GameState, bakersAreComing, canMakeKvass, canMakeLockpick, currentLevel, sanepidIsComing, timeLeft)
+import LevelFour (startLevelFour)
+import LevelThree (startLevelThree)
 
 startLevelTwo :: IO ()
 startLevelTwo = do
@@ -22,33 +24,35 @@ choosePathJesse state
     | currentLevel state /= 2 = return state
     | otherwise = do
         putStrLn "Jesse: Yo, Mr. Black, we gotta go back to the lab to make the Kvass, let's go!"
-        return state { canMakeKvass = True }
+        return state{canMakeKvass = True}
 
 choosePathWalter :: GameState -> IO GameState
 choosePathWalter state
     | currentLevel state /= 2 = return state
     | otherwise = do
         putStrLn "Walter: We should be able to make the lockpick out of some scraps left in the storage. Follow me."
-        return state { canMakeLockpick = True }
+        return state{canMakeLockpick = True}
 
 goToLab :: GameState -> IO GameState
 goToLab state
     | currentLevel state /= 2 = return state
     | otherwise = case () of
-        _ | canMakeKvass state -> do
-            --TODO startLevelThree
-            return state { currentLevel = 3 }
-          | otherwise -> do
-            putStrLn "Jesse: You can't got to the lab right now!"
-            return state
+        _
+            | canMakeKvass state -> do
+                startLevelThree
+                return state{currentLevel = 3}
+            | otherwise -> do
+                putStrLn "Jesse: You can't got to the lab right now!"
+                return state
 
 goToStorage :: GameState -> IO GameState
 goToStorage state
     | currentLevel state /= 2 = return state
     | otherwise = case () of
-        _ | canMakeLockpick state -> do
-            --TODO startLevelFour
-            return state {currentLevel = 4}
-          | otherwise -> do
-            putStrLn "Walter: Why should we go to the storage room right now?"
-            return state
+        _
+            | canMakeLockpick state -> do
+                startLevelFour
+                return state{currentLevel = 4}
+            | otherwise -> do
+                putStrLn "Walter: Why should we go to the storage room right now?"
+                return state

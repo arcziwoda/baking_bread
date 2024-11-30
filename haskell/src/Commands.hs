@@ -1,7 +1,9 @@
 module Commands where
 
 import Game
-import LevelOne (startLevelOne, talkToJesse, talkToSaul, lookAround, addIngredient, goToMainDoor)
+import LevelFour (createPick, goToOffice, lookAround, search, use)
+import LevelOne (addIngredient, goToMainDoor, lookAround, startLevelOne, talkToJesse, talkToSaul)
+import LevelThree (lookAround)
 import LevelTwo (choosePathJesse, choosePathWalter, goToLab, goToStorage)
 
 printIntroduction :: IO ()
@@ -22,11 +24,9 @@ printIntroduction = do
     putStrLn "---------------------------------------------"
 
 executeCommand :: Command -> GameState -> IO GameState
-
 executeCommand Quit state = do
     putStrLn "Quitting the game..."
     return state
-
 executeCommand Help state = do
     putStrLn "### Game rules ###"
     putStrLn "1. talk_to(name?) - Talk to someone."
@@ -38,24 +38,30 @@ executeCommand Help state = do
     putStrLn "7. search(what?) - Search for something."
     putStrLn "8. hack(what?) - Hack something."
     putStrLn "9. create_pick(first tool, second tool) - Create a lockpick."
-    putStrLn "10. move_pick(direction?) - Move the lockpick."
     putStrLn "Type \"help\" to see this message again."
     return state
-
 executeCommand Start state = do
     startLevelOne
-    return state { currentLevel = 1, playing = True }
-
+    return state{currentLevel = 1, playing = True}
 executeCommand (TalkTo "jesse") state = talkToJesse state
 executeCommand (TalkTo "saul") state = talkToSaul state
-executeCommand LookAround state = lookAround state
+executeCommand LookAround state = do
+    newState <- case currentLevel state of
+        1 -> LevelOne.lookAround state
+        3 -> LevelThree.lookAround state
+        4 -> LevelFour.lookAround state
+        _ -> return state
+    return newState
 executeCommand (Add where_ what) state = addIngredient where_ what state
 executeCommand (GoTo "main_door") state = goToMainDoor state
 executeCommand (ChoosePath "jesse") state = choosePathJesse state
 executeCommand (ChoosePath "walter") state = choosePathWalter state
 executeCommand (GoTo "lab") state = goToLab state
 executeCommand (GoTo "storage") state = goToStorage state
-
+executeCommand (GoTo "office") state = goToOffice state
+executeCommand (Search where_) state = search where_ state
+executeCommand (Use what) state = use what state
+executeCommand (CreatePick tool1 tool2) state = createPick tool1 tool2 state
 executeCommand _ state = do
     putStrLn "Unknown command."
     return state
