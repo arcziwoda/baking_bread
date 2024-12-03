@@ -1,67 +1,87 @@
 module Commands where
 
 import Game
-import LevelFour (createPick, goToOffice, lookAround, search, use)
+import Help
+import LevelFive (goToMainDoor, hackComputer, lookAround, search, talkToCesar, useKeycard)
+import LevelFour (createPick, goToOffice, lookAround, search, startLevelFour, use)
 import LevelOne (addIngredient, goToMainDoor, lookAround, startLevelOne, talkToJesse, talkToSaul)
 import LevelThree (lookAround)
 import LevelTwo (choosePathJesse, choosePathWalter, goToLab, goToStorage)
 
-printIntroduction :: IO ()
-printIntroduction = do
-    putStrLn "### Introduction ###"
-    putStrLn "---------------------------------------------"
-    putStrLn "Welcome to Baking B(re)ad: The Lab Escape!"
-    putStrLn "You are Walter Black, a brilliant baker working in Sus' bakery."
-    putStrLn "You work in a secret lab under the laundromat."
-    putStrLn "You are famous for your signature blue muffins, which rival bakers envy."
-    putStrLn "Your partner, known as Jesse Yellowman, is with you."
-    putStrLn "He is not as smart as you, but he is loyal and can help you."
-    putStrLn "If you type \"help\" Jesse will remind you of the possible commands."
-    putStrLn "After a botched deal, your situation has become dire."
-    putStrLn "You feel like one mistake could be your last."
-    putStrLn "After a long day of work it is time to add the last ingredient to your product."
-    putStrLn "Good luck!"
-    putStrLn "---------------------------------------------"
+data Command
+    = Help
+    | Quit
+    | Start
+    | TalkTo String
+    | LookAround
+    | Add String String
+    | GoTo String
+    | ChoosePath String
+    | Search String
+    | Use String
+    | CreatePick String String
+    | Hack String
+    deriving (Show, Eq)
+
+parseCommand :: String -> Command
+parseCommand input = case words input of
+    ["help"] -> Help
+    ["quit"] -> Quit
+    ["start"] -> Start
+    ["talk_to", name] -> TalkTo name
+    ["look_around"] -> LookAround
+    ["add", where_, what] -> Add where_ what
+    ["go_to", where_] -> GoTo where_
+    ["choose_path", name] -> ChoosePath name
+    ["search", where_] -> Search where_
+    ["use", what] -> Use what
+    ["create_pick", tool1, tool2] -> CreatePick tool1 tool2
+    ["hack", what] -> Hack what
+    _ -> Help
 
 executeCommand :: Command -> GameState -> IO GameState
 executeCommand Quit state = do
     putStrLn "Quitting the game..."
     return state
 executeCommand Help state = do
-    putStrLn "### Game rules ###"
-    putStrLn "1. talk_to(name?) - Talk to someone."
-    putStrLn "2. look_around - Look around."
-    putStrLn "3. add(where?, what?) - Add something to something."
-    putStrLn "4. use(what?) - Use something."
-    putStrLn "5. go_to(where?) - Go to a place."
-    putStrLn "6. choose_path(name?) - Choose a path."
-    putStrLn "7. search(what?) - Search for something."
-    putStrLn "8. hack(what?) - Hack something."
-    putStrLn "9. create_pick(first tool, second tool) - Create a lockpick."
-    putStrLn "Type \"help\" to see this message again."
+    printHelp
     return state
 executeCommand Start state = do
     startLevelOne
     return state{currentLevel = 1, playing = True}
 executeCommand (TalkTo "jesse") state = talkToJesse state
 executeCommand (TalkTo "saul") state = talkToSaul state
+executeCommand (TalkTo "cesar") state = talkToCesar state
 executeCommand LookAround state = do
     newState <- case currentLevel state of
         1 -> LevelOne.lookAround state
         3 -> LevelThree.lookAround state
         4 -> LevelFour.lookAround state
+        5 -> LevelFive.lookAround state
         _ -> return state
     return newState
 executeCommand (Add where_ what) state = addIngredient where_ what state
-executeCommand (GoTo "main_door") state = goToMainDoor state
+executeCommand (GoTo "main_door") state = do
+    newState <- case currentLevel state of
+        1 -> LevelOne.goToMainDoor state
+        5 -> LevelFive.goToMainDoor state
+        _ -> return state
+    return newState
 executeCommand (ChoosePath "jesse") state = choosePathJesse state
 executeCommand (ChoosePath "walter") state = choosePathWalter state
 executeCommand (GoTo "lab") state = goToLab state
 executeCommand (GoTo "storage") state = goToStorage state
 executeCommand (GoTo "office") state = goToOffice state
-executeCommand (Search where_) state = search where_ state
+executeCommand (Search where_) state = do
+    newState <- case currentLevel state of
+        4 -> LevelFour.search where_ state
+        5 -> LevelFive.search where_ state
+        _ -> return state
+    return newState
+executeCommand (Use "keycard") state = useKeycard state
 executeCommand (Use what) state = use what state
 executeCommand (CreatePick tool1 tool2) state = createPick tool1 tool2 state
+executeCommand (Hack "computer") state = hackComputer state
 executeCommand _ state = do
     putStrLn "Unknown command."
     return state

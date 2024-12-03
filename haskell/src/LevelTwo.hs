@@ -1,10 +1,4 @@
-module LevelTwo (
-    startLevelTwo,
-    choosePathJesse,
-    choosePathWalter,
-    goToLab,
-    goToStorage,
-) where
+module LevelTwo where
 
 import Game (GameState, bakersAreComing, canMakeKvass, canMakeLockpick, currentLevel, sanepidIsComing, timeLeft)
 import LevelFour (startLevelFour)

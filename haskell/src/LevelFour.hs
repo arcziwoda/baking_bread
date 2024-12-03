@@ -1,6 +1,7 @@
-module LevelFour (startLevelFour, lookAround, search, use, goToOffice, createPick) where
+module LevelFour where
 
 import Game (GameState, crowbarFound, currentLevel, lockPicked, pickCreated)
+import LevelFive (startLevelFive)
 
 startLevelFour :: IO ()
 startLevelFour = do
@@ -22,7 +23,7 @@ goToOffice :: GameState -> IO GameState
 goToOffice state
     | currentLevel state /= 4 || not (lockPicked state) = return state
     | otherwise = do
-        -- TODO: startLevelFive
+        startLevelFive
         return state{currentLevel = 5}
 
 correctToolsForPick :: String -> String -> Bool
