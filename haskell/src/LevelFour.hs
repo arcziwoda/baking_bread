@@ -1,6 +1,6 @@
 module LevelFour where
 
-import Game (GameState, crowbarFound, currentLevel, lockPicked, pickCreated)
+import Game (GameState, crowbarFound, currentLevel, lockPicked, pickCreated, byTheOfficeDoor)
 import LevelFive (startLevelFive)
 
 startLevelFour :: IO ()
@@ -53,20 +53,15 @@ search where_ state
     | otherwise = case () of
         _
             | validCrowbarLocation where_ -> do
-                putStrLn "Jesse: B****! We found a crowbar!"
+                putStrLn "Jesse: Yo, Mr. Black! We found a crowbar!"
                 return state{crowbarFound = True}
             | otherwise -> do
                 putStrLn "Walter: No luck here. Let's keep searching."
                 return state
 
-use :: String -> GameState -> IO GameState
-use "crowbar" state = useCrowbar state
-use "lockpick" state = useLockpick state
-use _ state = return state
-
 useCrowbar :: GameState -> IO GameState
 useCrowbar state
-    | currentLevel state /= 4 || not (crowbarFound state) = return state
+    | currentLevel state /= 4 || not (crowbarFound state) || lockPicked state || not (byTheOfficeDoor state) = return state
     | otherwise = do
         putStrLn "Walter: Let's use the crowbar to force the door open."
         putStrLn "[The door opens with a loud noise]"
@@ -75,7 +70,7 @@ useCrowbar state
 
 useLockpick :: GameState -> IO GameState
 useLockpick state
-    | currentLevel state /= 4 || not (pickCreated state) || lockPicked state = return state
+    | currentLevel state /= 4 || not (pickCreated state) || lockPicked state || not (byTheOfficeDoor state) = return state
     | otherwise = do
         putStrLn "Walter: Alright, let's try to pick the lock."
         initializePickSequence state
@@ -107,3 +102,12 @@ playPickSequence sequence state = do
 
 isValidMove :: [String] -> Bool
 isValidMove sequence = sequence == take (length sequence) ["up", "right", "down"]
+
+goToOfficeDoor :: GameState -> IO GameState
+goToOfficeDoor state
+    | currentLevel state /= 4 || lockPicked state || (not (crowbarFound state) && not (pickCreated state)) = return state
+    | otherwise = do
+        putStrLn "Walter: Now we can try to open the door."
+        putStrLn "Jesse: Do you know how to do it?"
+        putStrLn "Walter: We just have to try and hope for the best..."
+        return state { byTheOfficeDoor = True }

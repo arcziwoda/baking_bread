@@ -3,7 +3,7 @@ module Commands where
 import Game
 import Help
 import LevelFive (goToMainDoor, hackComputer, lookAround, search, talkToCesar, useKeycard)
-import LevelFour (createPick, goToOffice, lookAround, search, startLevelFour, use)
+import LevelFour (createPick, goToOffice, lookAround, search, startLevelFour, goToOfficeDoor, useCrowbar, useLockpick)
 import LevelOne (addIngredient, goToMainDoor, lookAround, startLevelOne, talkToJesse, talkToSaul)
 import LevelThree (lookAround, addIngredient, goToOfficeDoor, takePepperSpray, useKvass, goToOffice)
 import LevelTwo (choosePathJesse, choosePathWalter, goToLab, goToStorage)
@@ -87,6 +87,7 @@ executeCommand (GoTo "main_door") state = do
 executeCommand (GoTo "office_door") state = do
     newState <- case currentLevel state of
         3 -> LevelThree.goToOfficeDoor state
+        4 -> LevelFour.goToOfficeDoor state
         _ -> return state
     return newState
 
@@ -118,7 +119,9 @@ executeCommand (Use "keycard") state = useKeycard state
 
 executeCommand (Use "kvass") state = useKvass state
 
-executeCommand (Use what) state = use what state
+executeCommand (Use "crowbar") state = useCrowbar state
+
+executeCommand (Use "lockpick") state = useLockpick state
 
 executeCommand (CreatePick tool1 tool2) state = createPick tool1 tool2 state
 
