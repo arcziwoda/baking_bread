@@ -27,18 +27,19 @@ gameLoop state = do
         then putStrLn "Game Over"
         else gameLoop newState
 
+getTimeCostOfCommand :: Command -> GameState -> Int
+getTimeCostOfCommand command state = case command of
+    LookAround -> 0
+    CreatePick _ _ -> 2
+    Use "kvass" -> kvassDisolveTime state
+    _ -> 1
+
 decrementTime :: GameState -> Command -> GameState
 decrementTime state command
     | timeLeft state > 0 =
-        let decrementValue = getTimeCostOfCommand command
+        let decrementValue = getTimeCostOfCommand command state
          in state{timeLeft = timeLeft state - decrementValue}
     | otherwise = state
-
-getTimeCostOfCommand :: Command -> Int
-getTimeCostOfCommand command = case command of
-    LookAround -> 0
-    CreatePick _ _ -> 2
-    _ -> 1
 
 getUserInput :: IO String
 getUserInput = do

@@ -5,7 +5,7 @@ import Help
 import LevelFive (goToMainDoor, hackComputer, lookAround, search, talkToCesar, useKeycard)
 import LevelFour (createPick, goToOffice, lookAround, search, startLevelFour, use)
 import LevelOne (addIngredient, goToMainDoor, lookAround, startLevelOne, talkToJesse, talkToSaul)
-import LevelThree (lookAround)
+import LevelThree (lookAround, addIngredient, goToOfficeDoor, takePepperSpray, useKvass, goToOffice)
 import LevelTwo (choosePathJesse, choosePathWalter, goToLab, goToStorage)
 
 data Command
@@ -17,6 +17,7 @@ data Command
     | Add String String
     | GoTo String
     | ChoosePath String
+    | Take String
     | Search String
     | Use String
     | CreatePick String String
@@ -34,6 +35,7 @@ parseCommand input = case words input of
     ["go_to", where_] -> GoTo where_
     ["choose_path", name] -> ChoosePath name
     ["search", where_] -> Search where_
+    ["take", what] -> Take what
     ["use", what] -> Use what
     ["create_pick", tool1, tool2] -> CreatePick tool1 tool2
     ["hack", what] -> Hack what
@@ -67,7 +69,13 @@ executeCommand LookAround state = do
         5 -> LevelFive.lookAround state
         _ -> return state
     return newState
-executeCommand (Add where_ what) state = addIngredient where_ what state
+
+executeCommand (Add where_ what) state = do
+    newState <- case currentLevel state of
+        1 -> LevelOne.addIngredient where_ what state
+        3 -> LevelThree.addIngredient where_ what state
+        _ -> return state
+    return newState
 
 executeCommand (GoTo "main_door") state = do
     newState <- case currentLevel state of
@@ -75,6 +83,14 @@ executeCommand (GoTo "main_door") state = do
         5 -> LevelFive.goToMainDoor state
         _ -> return state
     return newState
+
+executeCommand (GoTo "office_door") state = do
+    newState <- case currentLevel state of
+        3 -> LevelThree.goToOfficeDoor state
+        _ -> return state
+    return newState
+
+executeCommand (Take "pepper_spray") state = takePepperSpray state
 
 executeCommand (ChoosePath "jesse") state = choosePathJesse state
 
@@ -84,7 +100,12 @@ executeCommand (GoTo "lab") state = goToLab state
 
 executeCommand (GoTo "storage") state = goToStorage state
 
-executeCommand (GoTo "office") state = goToOffice state
+executeCommand (GoTo "office") state = do
+    newState <- case currentLevel state of
+        3 -> LevelThree.goToOffice state
+        4 -> LevelFour.goToOffice state
+        _ -> return state
+    return newState
 
 executeCommand (Search where_) state = do
     newState <- case currentLevel state of
@@ -92,7 +113,10 @@ executeCommand (Search where_) state = do
         5 -> LevelFive.search where_ state
         _ -> return state
     return newState
+
 executeCommand (Use "keycard") state = useKeycard state
+
+executeCommand (Use "kvass") state = useKvass state
 
 executeCommand (Use what) state = use what state
 

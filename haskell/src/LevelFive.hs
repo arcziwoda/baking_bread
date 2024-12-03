@@ -2,7 +2,7 @@ module LevelFive where
 
 import Data.Char (isLower, isUpper)
 import EndGame (endGame)
-import Game (GameState, byTheDoor, currentLevel, keycardFound, pinFound)
+import Game (GameState, byTheMainDoor, currentLevel, keycardFound, pinFound)
 
 startLevelFive :: IO ()
 startLevelFive = do
@@ -67,11 +67,11 @@ goToMainDoor state
     | otherwise = do
         putStrLn "Jesse: Finally Mr. Black, we are getting out of here!"
         putStrLn "Jesse: Quick, use the keycard and enter the PIN code!"
-        return state{byTheDoor = True}
+        return state{byTheMainDoor = True}
 
 useKeycard :: GameState -> IO GameState
 useKeycard state
-    | currentLevel state /= 5 || not (byTheDoor state) = return state
+    | currentLevel state /= 5 || not (byTheMainDoor state) = return state
     | otherwise = do
         putStrLn "[Walter swipes the keycard. The PIN prompt appears]"
         putStrLn "Enter the PIN code: "

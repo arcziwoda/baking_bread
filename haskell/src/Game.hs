@@ -11,12 +11,16 @@ data GameState = GameState
     , canMakeKvass :: Bool
     , canMakeLockpick :: Bool
     , kvassDisolveTime :: Int
+    , addedWholeGrainBread :: Bool
+    , addedYeast :: Bool
+    , addedWater :: Bool
     , pickCreated :: Bool
     , lockPicked :: Bool
     , crowbarFound :: Bool
+    , byTheOfficeDoor :: Bool
     , keycardFound :: Bool
     , pinFound :: Bool
-    , byTheDoor :: Bool
+    , byTheMainDoor :: Bool
     , pepperSpray :: Bool
     }
     deriving (Show, Eq)
@@ -34,11 +38,15 @@ initialState =
         , canMakeKvass = False
         , canMakeLockpick = False
         , kvassDisolveTime = 3
+        , addedWholeGrainBread = False
+        , addedYeast = False
+        , addedWater = False
         , pickCreated = False
         , lockPicked = False
         , crowbarFound = False
+        , byTheOfficeDoor = False
         , keycardFound = False
         , pinFound = False
-        , byTheDoor = False
+        , byTheMainDoor = False
         , pepperSpray = False
         }
