@@ -1,6 +1,7 @@
 module LevelFive where
 
 import Data.Char (isLower, isUpper)
+import EndGame (endGame)
 import Game (GameState, byTheDoor, currentLevel, keycardFound, pinFound)
 
 startLevelFive :: IO ()
@@ -77,8 +78,8 @@ useKeycard state
         pin <- getLine
         if pin == "997420"
             then do
-                -- TODO: ending
                 putStrLn "SUCCESS"
+                endGame state
                 return state
             else do
                 putStrLn "FAILURE! The PIN code is incorrect!"

@@ -17,6 +17,7 @@ data GameState = GameState
     , keycardFound :: Bool
     , pinFound :: Bool
     , byTheDoor :: Bool
+    , pepperSpray :: Bool
     }
     deriving (Show, Eq)
 
@@ -39,4 +40,5 @@ initialState =
         , keycardFound = False
         , pinFound = False
         , byTheDoor = False
+        , pepperSpray = False
         }
