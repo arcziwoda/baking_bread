@@ -1,19 +1,5 @@
 module Game where
 
-data Command
-    = Help
-    | Quit
-    | Start
-    | TalkTo String
-    | LookAround
-    | Add String String
-    | GoTo String
-    | ChoosePath String
-    | Search String
-    | Use String
-    | CreatePick String String
-    deriving (Show, Eq)
-
 data GameState = GameState
     { currentLevel :: Int
     , timeLeft :: Int
@@ -28,6 +14,9 @@ data GameState = GameState
     , pickCreated :: Bool
     , lockPicked :: Bool
     , crowbarFound :: Bool
+    , keycardFound :: Bool
+    , pinFound :: Bool
+    , byTheDoor :: Bool
     }
     deriving (Show, Eq)
 
@@ -47,4 +36,7 @@ initialState =
         , pickCreated = False
         , lockPicked = False
         , crowbarFound = False
+        , keycardFound = False
+        , pinFound = False
+        , byTheDoor = False
         }

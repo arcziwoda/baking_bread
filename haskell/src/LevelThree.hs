@@ -1,4 +1,4 @@
-module LevelThree (startLevelThree, lookAround) where
+module LevelThree where
 
 import Game (GameState, currentLevel, timeLeft)
 
