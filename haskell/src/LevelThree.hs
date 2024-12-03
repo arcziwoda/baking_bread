@@ -40,8 +40,8 @@ addIngredient "kvass" ingredient state
             putStrLn "Jesse: Do you want to add anything else or we good to go?"
             return state { addedWater = True, kvassDisolveTime = kvassDisolveTime state + 1 }
         else do
-            putStrLn "Walter: No, that's not right. We need to add the correct ingredient to the muffins."
-            putStrLn "Jesse: Come on, think! What was it again?"
+            putStrLn "Jesse: Come on! We're not adding this to the kvass!"
+            putStrLn "Walter: Sorry! I got distracted!"
             return state
 addIngredient _ _ state
     | currentLevel state /= 3 = return state
