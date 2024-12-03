@@ -1,24 +1,23 @@
-start.
-play.
+help                                    Time left:
+start
 
 Level 1:
-look_around.
-add(muffins, los_pollos_hermanos_sauce).
-talk_to(saul).                          (20)
-go_to(main_door).                       (19)
+look_around
+add muffins los_pollos_hermanos_sauce
+talk_to saul                            (20)
+go_to main_door                         (19)
 
 Level 2:
-choose_path(walter).                    (18)
-go_to(storage).                         (17)
+choose_path walter                      (18)
+go_to storage                           (17)
 
 Level 4:
-look_around.
-create_pick(metal_wires, screwdriver).  (15)
-create_pick(screwdriver, hammer).       (13)
-create_pick(metal_wires, hammer).
-search(hatch).                          (12)
-search(dumpster).                       (11)
-go_to(office_door).                     (10)
+look_around
+create_pick metal_wires, screwdriver    (15) Czas się nie zgadza tutaj
+create_pick screwdriver, hammer         (13)
+create_pick metal_wires, hammer 
+search hatch                            (12)
+search dumpster                         (11)
 use(lockpick).
 move_pick(up).                          
 move_pick(up).                          (9)

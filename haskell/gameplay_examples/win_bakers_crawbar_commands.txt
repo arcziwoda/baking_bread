@@ -1,25 +1,23 @@
-start.
-play.
+help                                    Time left:
+start
 
 Level 1:
-look_around.
-add(muffins, blue_food_coloring).
-talk_to(saul).                          (25)
-go_to(main_door).                       (24)
+look_around
+add muffins blue_food_coloring
+talk_to saul                            (25)
+go_to main_door                         (24)
 
 Level 2:
-choose_path(walter).                    (23)
-go_to(storage).                         (22)
+choose_path walter                      (23)
+go_to storage                           (22)
 
 Level 4:
-look_around.
-search(tool_cabinet).                   (21)
-search(hatch).                          (20)
-search(metal_barrel).                   (19)
-create_pick(screwdriver, hammer).       (17)
-create_pick(metal_wires, hammer).
-go_to(office_door).                     (16)
-use(lockpick).
+look_around
+search tool_cabinet                     (21)
+search hatch                            (20)
+search metal_barrel                     (19)
+use crawbar                             (18) Nic się nie pokazuje
+
 move_pick(down).                        (15)
 move_pick(up).
 move_pick(down).                        (14)

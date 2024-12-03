@@ -4,6 +4,7 @@ import Commands (Command (..), executeCommand, parseCommand)
 import Game (GameState (..), initialState)
 import Help (printIntroduction)
 import System.IO (hFlush, stdout)
+import Control.Monad (when)
 
 main :: IO ()
 main = do
@@ -18,9 +19,8 @@ gameLoop state = do
     input <- getUserInput
     let command = parseCommand input
     let updatedTimeState = decrementTime state command
-    if timeLeft updatedTimeState < timeLeft state
-        then putStrLn $ "Time left: " ++ show (timeLeft updatedTimeState)
-        else return ()
+    when (timeLeft updatedTimeState < timeLeft state) $
+        putStrLn $ "Time left: " ++ show (timeLeft updatedTimeState)
     newState <- executeCommand command updatedTimeState
     if command == Quit
         then putStrLn "Game Over"
