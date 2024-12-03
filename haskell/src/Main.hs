@@ -1,10 +1,10 @@
 module Main where
 
 import Commands (Command (..), executeCommand, parseCommand)
+import Control.Monad (when)
 import Game (GameState (..), initialState)
 import Help (printIntroduction)
 import System.IO (hFlush, stdout)
-import Control.Monad (when)
 
 main :: IO ()
 main = do
@@ -20,7 +20,8 @@ gameLoop state = do
     let command = parseCommand input
     let updatedTimeState = decrementTime state command
     when (timeLeft updatedTimeState < timeLeft state) $
-        putStrLn $ "Time left: " ++ show (timeLeft updatedTimeState)
+        putStrLn $
+            "Time left: " ++ show (timeLeft updatedTimeState)
     newState <- executeCommand command updatedTimeState
     if command == Quit
         then putStrLn "Game Over"
@@ -36,6 +37,7 @@ decrementTime state command
 getTimeCostOfCommand :: Command -> Int
 getTimeCostOfCommand command = case command of
     LookAround -> 0
+    CreatePick _ _ -> 2
     _ -> 1
 
 getUserInput :: IO String
