@@ -15,18 +15,34 @@ Good luck!
 ---------------------------------------------
 Type "help" to see the game rules.
 Type "start" to begin the game.
+> help
+### Game rules ###
+1. talk_to [name?] - Talk to someone.
+2. look_around - Look around.
+3. add [where?] [what?] - Add something to something.
+4. use [what?]  - Use something.
+5. go_to [where?] - Go to a place.
+6. choose_path [name?] - Choose a path.
+7. search [what?] - Search for something.
+8. hack [what?] - Hack something.
+9. create_pick [first tool] [second tool] - Create a lockpick.
+Type "help" to see this message again.
 > start
 Walter: Yo, Jesse, you there?
 Jesse: Yeah, Mr. Black, what's up?
 Walter: It's been a rough day, huh?
 Jesse: You bet. These blue muffins are no joke.
 Walter: We need to finish them up.
+> talk_to jesse
+Jesse: Man, I never thought baking could be this intense.
+Walter: It's all about precision, Jesse. One wrong move and it's all over.
+Jesse: Yeah, yeah, I get it. But these muffins... they're something else.
+Walter: They have to be perfect. Our reputation depends on it.
+Jesse: Yo, Mr. Black, what's the final ingredient for the cake?
+Jesse: I totally forgot, man. Maybe you should look around to see what's on the table.
 > look_around
 Walter: Let's see what's on the table...
 [sees sugar, blue food coloring, baking soda and los pollos hermanos sauce]
-> add muffins sugar
-Walter: No, that's not right. We need to add the correct ingredient to the muffins.
-Jesse: Come on, think! What was it again?
 > add muffins blue_food_coloring
 Walter: That's it! The final ingredient for the muffins is blue_food_coloring!
 Jesse: Yo, Mr. Black! These muffins are gonna be tight!
@@ -41,76 +57,58 @@ Jesse: Yo, Mr. Black, this is bad. What do we do?
 Walter: We need to get to the main door, Jesse. Now!
 Jesse: Alright, let's go!
 > go_to main_door
-Time left: 24
 Jesse: Yo, the door won't open!
 Walter: Damn it, it can only be unlocked by a key card. I think it's locked in Sus' office.
 Jesse: And how do we get there?
 Walter: We don't have the key, but we could try to pick the lock.
 Jesse: I ain't no locksmith, we should use some Kvass to melt the lock.
 Walter: We have to pick one of the options, we don't have much time left!
-> choose_path walter
+> choose_path jesse
 Time left: 23
-Walter: We should be able to make the lockpick out of some scraps left in the storage. Follow me.
-> go_to storage
+Jesse: Yo, Mr. Black, we gotta go back to the lab to make the Kvass, let's go!
+> go_to lab
 Time left: 22
-Jesse: We need to find tools for making a lockpick!
-Walter: Or we could try to find a crowbar somewhere.
+Jesse: I think we have some leftover Kvass from the last batch of bread.
+Watler: Yes, over there, but it's pretty weak, it won't dissolve the lock quickly.
+Jesse: Aight, then maybe we could add something to make it stronger or go straight to the office door and use it.
 > look_around
-Walter: Let's see what we can find here...
-[sees some metal wires, a screwdriver, a hammer, and a wrench]
-Walter: These tools could help us make a lockpick. I belive it is made from two things.
-[sees a hatch, a tool cabinet, a metal barrel, and a dumpster]
-Walter: We could search these places for the crowbar.
-> search dumpster
+Walter: What do we have here that could be useful...
+[sees some whole grain bread, water, and some yeast]
+> add kvass water
 Time left: 21
-Walter: No luck here. Let's keep searching.
-> search tool_cabinet
+Jesse: Do you want to add anything else or we good to go?
+> go_to office_door
 Time left: 20
-Walter: No luck here. Let's keep searching.
-> search hatch
-Time left: 19
-Walter: No luck here. Let's keep searching.
-> search metal_barrel 
-Time left: 18
-Jesse: B****! We found a crowbar!
-> use crowbar
-Time left: 17
-Walter: Let's use the crowbar to force the door open.
-[The door opens with a loud noise]
-Jesse: Yes b****! Let's go through them man!
-> go_to office
+Walter: Ok, the Kvass is ready, now let's take it to the office's door.
+Jesse: Yo, I remember there was a pepper spray in the lab. Maybe we should take it?
+Walter: I don't know Jesse, it will take some time to find it...
+> use kvass
 Time left: 16
+Jesse: Aight, now let's pour this bad boy on the lock!
+Walter: Here goes nothing...
+It took 4 minutes to dissolve the lock
+[Office door slowly opens]
+> go_to office
+Time left: 15
 Jesse: Yessss, it worked Mr. Black, we're in!
-> look_around 
+> look_around
 Walter: Let's find that keycard...
 [The office is small. There are shelves and desk with computer on it]
 > search desk
-Time left: 15
+Time left: 14
 Walter: Found it!
 Jesse: That's the stuff, Mr. Black!
 [Reads the keycard: In order to open the main door you need to provide the PIN code]
 Walter: Damn it Jesse, we need to hack the computer to get the PIN code!
 Jesse: Let's do it!
 > hack computer
-Time left: 14
+Time left: 13
 The encrypted password is: ebiil
 Enter the decrypted password: 
-abcde
+lalala
 Walter: Wrong password!
 Jesse: My friend Cesar can help us with that task!
 Jesse: Just call him and tell him the encryption with your shift guess!
-> talk_to cesar
-Time left: 13
-Jesse: Let's see if Cesar picks up...
-Cesar: Hello?
-Jesse: Yo Cesar, it's Jesse, I don't have time to explain, but can you help us decrypt a computer password?
-Cesar: Um... sure, what's the encrypted password?
-ebiil
-Cesar: Alright, now I need you to tell me by how much to shift the letters.
-Enter the shift value: 
-1
-Jesse: Eee... I don't know, but maybe 1.
-Cesar: ebiil shifted by 1 is fcjjm.
 > talk_to cesar
 Time left: 12
 Jesse: Let's see if Cesar picks up...
@@ -145,17 +143,9 @@ SUCCESS
 [The main door opens]
 [Walter and Jesse didn't escape in time and the bakers made it to the lab]
 Jack Welker: We got you now!
-Walter: Jesse! Block the door with the crowbar, now!
-Jesse: Got it! That'll keep them out for a while.
-[Walter and Jesse block the door and make their escape!]
-[Walter and Jesse exit the lab]
-Jesse: Yesssss! Hell yeah! Ey c'mon baby. C'mon yes!
-[Jesse awaits Walter to give him a high five]
-[Walter gives jesse high five]
-Walter: Ahhhhh!
-Jesse: Ahhhhh!
-Jesse: Du'uh!
-Walter: Let's get out of here!
+Walter: We should have taken something to defend ourselves!
+Jack Welker: You're dead meat!
+[Jack shoots Walter and Jesse]
 ==============================================
-                  YOU WON                     
+                  YOU LOST                    
 ==============================================

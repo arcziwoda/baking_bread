@@ -2,6 +2,7 @@ help                                    Time left:
 start
 
 Level 1:
+talk_to jesse
 look_around
 add muffins los_pollos_hermanos_sauce
 talk_to saul                            (20)
@@ -13,12 +14,10 @@ go_to storage                           (17)
 
 Level 4:
 look_around
-create_pick metal_wires, screwdriver    (15) Czas się nie zgadza tutaj
-create_pick screwdriver, hammer         (13)
-create_pick metal_wires, hammer 
-search hatch                            (12)
-search dumpster                         (11)
-use(lockpick).
+create_pick metal_wires screwdriver    (15)
+create_pick screwdriver hammer         (13)
+create_pick metal_wires hammer         (11)
+use lockpick                                    Tutaj brak komunikatu :(
 move_pick(up).                          
 move_pick(up).                          (9)
 move_pick(down).                        (8)

@@ -29,7 +29,7 @@ initialState :: GameState
 initialState =
     GameState
         { currentLevel = 0
-        , timeLeft = 0
+        , timeLeft = 10000
         , playing = False
         , bakersAreComing = False
         , sanepidIsComing = False

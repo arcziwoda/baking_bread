@@ -1,4 +1,4 @@
-module EndGame (endGame) where
+module EndGame (endGame, checkTimeLeft) where
 
 import Game (GameState(..))
 import System.Exit (exitSuccess, exitFailure)
@@ -9,6 +9,29 @@ endGame state = do
     if timeLeft state >= 10
         then playerWon
         else checkPlayerWon state
+
+checkTimeLeft :: GameState -> IO ()
+checkTimeLeft state
+    | timeLeft state <= 0 = do
+        if bakersAreComing state
+            then do
+                putStrLn "[Walter and Jesse didn't escape in time and the bakers made it to the lab]"
+                putStrLn "Jack Welker: We got you now!"
+                putStrLn "Walter: We should have taken something to defend ourselves!"
+                putStrLn "Jack Welker: You're dead meat!"
+                putStrLn "[Jack shoots Walter and Jesse]"
+                playerLost
+            else if sanepidIsComing state
+                then do
+                    putStrLn "[Walter and Jesse didn't escape in time and the sanepid inspector made it to the lab]"
+                    putStrLn "Hank Schrader: Sanepid inspection! Get out of there now!"
+                    putStrLn "Walter: We should have taken something to defend ourselves!"
+                    putStrLn "Hank Schrader: You're under arrest!"
+                    putStrLn "[Hank arrests Walter and Jesse]"
+                    playerLost
+                else playerLost
+    | otherwise = return ()
+
 
 checkPlayerWon :: GameState -> IO ()
 checkPlayerWon state

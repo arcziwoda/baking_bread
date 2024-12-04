@@ -2,6 +2,7 @@ help                                    Time left:
 start
 
 Level 1:
+talk_to jesse
 look_around
 add muffins sugar
 add muffins blue_food_coloring
@@ -18,7 +19,7 @@ search dumpster                         (21)
 search tool_cabinet                     (20)
 search hatch                            (19)
 search metal_barrel                     (18)
-use crowbar                             (17)
+use crowbar                             (17) Tutaj brak komunikatu :(
 go_to office                            (16)
 
 Level 5:
