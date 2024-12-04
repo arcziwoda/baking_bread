@@ -1,0 +1,184 @@
+Welcome to Baking B(re)ad: The Lab Escape!
+### Introduction ###
+---------------------------------------------
+Welcome to Baking B(re)ad: The Lab Escape!
+You are Walter Black, a brilliant baker working in Sus' bakery.
+You work in a secret lab under the laundromat.
+You are famous for your signature blue muffins, which rival bakers envy.
+Your partner, known as Jesse Yellowman, is with you.
+He is not as smart as you, but he is loyal and can help you.
+If you type "help" Jesse will remind you of the possible commands.
+After a botched deal, your situation has become dire.
+You feel like one mistake could be your last.
+After a long day of work it is time to add the last ingredient to your product.
+Good luck!
+---------------------------------------------
+Type "help" to see the game rules.
+Type "start" to begin the game.
+> help
+### Game rules ###
+1. talk_to [name?] - Talk to someone.
+2. look_around - Look around.
+3. add [where?] [what?] - Add something to something.
+4. use [what?]  - Use something.
+5. go_to [where?] - Go to a place.
+6. choose_path [name?] - Choose a path.
+7. search [what?] - Search for something.
+8. hack [what?] - Hack something.
+9. create_pick [first tool] [second tool] - Create a lockpick.
+Type "help" to see this message again.
+> start
+Walter: Yo, Jesse, you there?
+Jesse: Yeah, Mr. Black, what's up?
+Walter: It's been a rough day, huh?
+Jesse: You bet. These blue muffins are no joke.
+Walter: We need to finish them up.
+> talk_to jesse
+Jesse: Man, I never thought baking could be this intense.
+Walter: It's all about precision, Jesse. One wrong move and it's all over.
+Jesse: Yeah, yeah, I get it. But these muffins... they're something else.
+Walter: They have to be perfect. Our reputation depends on it.
+Jesse: Yo, Mr. Black, what's the final ingredient for the cake?
+Jesse: I totally forgot, man. Maybe you should look around to see what's on the table.
+> look_around
+Walter: Let's see what's on the table...
+[sees sugar, blue food coloring, baking soda and los pollos hermanos sauce]
+> add muffins sugar
+Walter: No, that's not right. We need to add the correct ingredient to the muffins.
+Jesse: Come on, think! What was it again?
+> add muffins blue_food_coloring
+Walter: That's it! The final ingredient for the muffins is blue_food_coloring!
+Jesse: Yo, Mr. Black! These muffins are gonna be tight!
+Walter: Yes, Jesse. Now let's finish these muffins and move on.
+[The phone rings]
+Jesse: Yo, Mr. Black! It's Saul! Better pick that up!
+> talk_to saul
+Saul Badman: Hey, Walter! It's Saul. Listen, the rival bakers are on their way. You gotta get outta there, man!
+Walter: Damn it, Saul! How much time do we have?
+Saul Badman: Not much, maybe a few minutes. You need to move!
+Jesse: Yo, Mr. Black, this is bad. What do we do?
+Walter: We need to get to the main door, Jesse. Now!
+Jesse: Alright, let's go!
+> go_to main_door
+Jesse: Yo, the door won't open!
+Walter: Damn it, it can only be unlocked by a key card. I think it's locked in Sus' office.
+Jesse: And how do we get there?
+Walter: We don't have the key, but we could try to pick the lock.
+Jesse: I ain't no locksmith, we should use some Kvass to melt the lock.
+Walter: We have to pick one of the options, we don't have much time left!
+> choose_path walter
+Time left: 23
+Walter: We should be able to make the lockpick out of some scraps left in the storage. Follow me.
+> go_to storage
+Time left: 22
+Jesse: We need to find tools for making a lockpick!
+Walter: Or we could try to find a crowbar somewhere.
+> look_around
+Walter: Let's see what we can find here...
+[sees some metal wires, a screwdriver, a hammer, and a wrench]
+Walter: These tools could help us make a lockpick. I belive it is made from two things.
+[sees a hatch, a tool cabinet, a metal barrel, and a dumpster]
+Walter: We could search these places for the crowbar.
+> search dumpster
+Time left: 21
+Walter: No luck here. Let's keep searching.
+> search tool_cabinet
+Time left: 20
+Walter: No luck here. Let's keep searching.
+> search hatch
+Time left: 19
+Walter: No luck here. Let's keep searching.
+> search metal_barrel
+Time left: 18
+Jesse: Yo, Mr. Black! We found a crowbar!
+> go_to office_door
+Time left: 17
+Walter: Now we can try to open the door.
+Jesse: Do you know how to do it?
+Walter: We just have to try and hope for the best...
+> use crowbar
+Time left: 16
+Walter: Let's use the crowbar to force the door open.
+[The door opens with a loud noise]
+Jesse: Yes b****! Let's go through them man!
+> go_to office
+Time left: 15
+Jesse: Yessss, it worked Mr. Black, we're in!
+> look_around
+Walter: Let's find that keycard...
+[The office is small. There are shelves and desk with computer on it]
+> search desk
+Time left: 14
+Walter: Found it!
+Jesse: That's the stuff, Mr. Black!
+[Reads the keycard: In order to open the main door you need to provide the PIN code]
+Walter: Damn it Jesse, we need to hack the computer to get the PIN code!
+Jesse: Let's do it!
+> hack computer
+Time left: 13
+The encrypted password is: ebiil
+Enter the decrypted password: 
+abcde
+Walter: Wrong password!
+Jesse: My friend Cesar can help us with that task!
+Jesse: Just call him and tell him the encryption with your shift guess!
+> talk_to cesar
+Time left: 12
+Jesse: Let's see if Cesar picks up...
+Cesar: Hello?
+Jesse: Yo Cesar, it's Jesse, I don't have time to explain, but can you help us decrypt a computer password?
+Cesar: Um... sure, what's the encrypted password?
+ebiil
+Cesar: Alright, now I need you to tell me by how much to shift the letters.
+Enter the shift value: 
+1
+Jesse: Eee... I don't know, but maybe 1.
+Cesar: ebiil shifted by 1 is fcjjm.
+> talk_to cesar
+Time left: 11
+Jesse: Let's see if Cesar picks up...
+Cesar: Hello?
+Jesse: Yo Cesar, it's Jesse, I don't have time to explain, but can you help us decrypt a computer password?
+Cesar: Um... sure, what's the encrypted password?
+ebiil
+Cesar: Alright, now I need you to tell me by how much to shift the letters.
+Enter the shift value: 
+3
+Jesse: Eee... I don't know, but maybe 3.
+Cesar: ebiil shifted by 3 is hello.
+> hack computer
+Time left: 10
+The encrypted password is: ebiil
+Enter the decrypted password: 
+hello
+Walter: We did it!
+Jesse: Yeah, science!
+[The computer displays the PIN code: 997420]
+Walter: Let's go to the main door and get out of here!
+> go_to main_door
+Time left: 9
+Jesse: Finally Mr. Black, we are getting out of here!
+Jesse: Quick, use the keycard and enter the PIN code!
+> use keycard
+Time left: 8
+[Walter swipes the keycard. The PIN prompt appears]
+Enter the PIN code: 
+997420
+SUCCESS
+[The main door opens]
+[Walter and Jesse didn't escape in time and the bakers made it to the lab]
+Jack Welker: We got you now!
+Walter: Jesse! Block the door with the crowbar, now!
+Jesse: Got it! That'll keep them out for a while.
+[Walter and Jesse block the door and make their escape!]
+[Walter and Jesse exit the lab]
+Jesse: Yesssss! Hell yeah! Ey c'mon baby. C'mon yes!
+[Jesse awaits Walter to give him a high five]
+[Walter gives jesse high five]
+Walter: Ahhhhh!
+Jesse: Ahhhhh!
+Jesse: Du'uh!
+Walter: Let's get out of here!
+==============================================
+                  YOU WON                     
+==============================================
