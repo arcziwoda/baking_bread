@@ -48,4 +48,3 @@ To exit, type `quit` when prompted for your action.
 
 ## Development
 This project was originally developed in **Prolog**, **Haskell**, and has now been rewritten in **Smalltalk** to demonstrate the versatility and power of different programming paradigms. The Smalltalk version emphasizes object-oriented design and interactive development.
-
