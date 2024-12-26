@@ -13,16 +13,15 @@ Object subclass: Level [
                 action := input.
                 arguments := #().
             ].
-        Transcript show: 'Action: ', action; cr.
-        Transcript show: 'Arguments: ', (arguments isEmpty 
-        ifTrue: ['None'] 
-        ifFalse: [arguments inject: '' into: [:acc :each | acc , ' ', each] ]); cr.
         (action = 'help') ifTrue: [
             game help.
             ^0
-        ] ifFalse: [
-            ^self processInput.
         ].
+        (action = 'quit') ifTrue: [
+            game setPlaying: false.
+            ^0
+        ].
+        ^self processInput.
     ]
     Level >> processInput [
         self subclassResponsibility
