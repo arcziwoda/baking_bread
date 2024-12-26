@@ -1,4 +1,5 @@
 FileStream fileIn: 'Level.st'.
+FileStream fileIn: 'LevelFive.st'.
 FileStream fileIn: 'LevelFour.st'.
 FileStream fileIn: 'LevelThree.st'.
 FileStream fileIn: 'LevelTwo.st'.
