@@ -108,6 +108,14 @@ Object subclass: Game [
         canUseMainDoor := true.
     ]
 
+    Game >> setCanMakeLockpick [
+        canMakeLockpick := true.
+    ]
+
+    Game >> setCanMakeKvass [
+        canMakeKvass := true.
+    ]
+
     Game >> decTimeLeft: aValue [
         timeLeft := timeLeft - aValue.
     ]
@@ -143,6 +151,14 @@ Object subclass: Game [
 
     Game >> getCanUseMainDoor [
         ^canUseMainDoor.
+    ]
+
+    Game >> getCanMakeKvass [
+        ^canMakeKvass.
+    ]
+
+    Game >> getCanMakeLockpick [
+        ^canMakeLockpick.
     ]
 
     Game >> processInput: input [

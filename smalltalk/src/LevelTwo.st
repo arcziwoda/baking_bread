@@ -10,11 +10,23 @@ Level subclass: LevelTwo [
         ^self
     ]
     LevelTwo >> processInput [
-        Transcript show: 'Processing input in Level 2: ', action; cr.
-        (action = 'choose_path') ifTrue: [
-            
+        (action = 'choose_path' and: [(arguments size >= 1)]) ifTrue: [
+            (arguments first = 'walter') ifTrue: [
+                Transcript show: 'Walter: We should be able to make the lockpick out of some scraps left in the storage. Follow me.'; cr.
+                game setCanMakeLockpick.
+            ].
+            (arguments first = 'jesse') ifTrue: [
+                Transcript show: 'Jesse: Yo, Mr. Black, we gotta go back to the lab to make the Kvass, let''s go!'; cr.
+                game setCanMakeKvass.
+            ].
         ].
-        (action = 'go_to') ifTrue: [
+        (action = 'go_to' and: [(arguments size >= 1)]) ifTrue: [
+            (arguments first = 'storage' and: [game getCanMakeLockpick.]) ifTrue: [
+                game setCurrentLevel: (LevelFour new).
+            ].
+            (arguments first = 'lab' and: [game getCanMakeKvass.]) ifTrue: [
+                game setCurrentLevel: (LevelThree new).
+            ].
         ].
         ^1
     ]
