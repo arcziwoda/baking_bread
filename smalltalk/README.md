@@ -40,7 +40,26 @@ Upon starting, you’ll be presented with a description of your surroundings and
 
 ### Example:
 ```plaintext
-...
+Enter command: add kvass whole_grain_bread
+Jesse: Do you want to add anything else or we good to go?
+Time left 15
+Enter command: go_to office_door
+Walter: Ok, the Kvass is ready, now let's take it to the office's door.
+Jesse: Yo, I remember there was a pepper spray in the lab. Maybe we should take it?
+Walter: I don't know Jesse, it will take some time to find it...
+Time left 14
+Enter command: take pepper_spray
+Jesse: Yo Mr. Black, there's still some left in the can, this might come in handy later...
+Walter: Great, now let's use the Kvass, we don't have time, remember?
+Time left 13
+Enter command: use kvass
+Jesse: Aight, now let's pour this bad boy on the lock!
+Walter: Here goes nothing...
+It took 1 minute to dissolve the lock
+[Office door slowly opens]
+Time left 12
+Enter command: go_to office
+Jesse: Yessss, it worked Mr. Black, we're in!
 ```
 
 ### 4. Quitting the Game:
