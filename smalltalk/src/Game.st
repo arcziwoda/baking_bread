@@ -79,7 +79,7 @@ Object subclass: Game [
             ].
             self decTimeLeft: (currentLevel parseInput: (self getUserInput)).
         ].
-        Transcript show: 'Game Over! Thanks for playing!'; cr.
+        self setCurrentLevel: (EndGame new).
     ]
 
     Game >> initializeLevels [
@@ -118,6 +118,10 @@ Object subclass: Game [
 
     Game >> decTimeLeft: aValue [
         timeLeft := timeLeft - aValue.
+        (timeLeft <= 0) ifTrue: [
+            timeLeft := 0.
+            playing := false.
+        ].
     ]
 
     Game >> setPlaying: aValue [
@@ -154,6 +158,18 @@ Object subclass: Game [
 
     Game >> setLockPicked [
         lockPicked := true.
+    ]
+
+    Game >> setKeycardFound [
+        keycardFound := true.
+    ]
+
+    Game >> setPinFound [
+        pinFound := true.
+    ]
+
+    Game >> setByTheMainDoor [
+        byTheMainDoor := true.
     ]
 
     Game >> getUserInput [
@@ -211,6 +227,26 @@ Object subclass: Game [
 
     Game >> getKvassDisolveTime [
         ^kvassDisolveTime.
+    ]
+
+    Game >> getKeycardFound [
+        ^keycardFound.
+    ]
+
+    Game >> getPinFound [
+        ^pinFound.
+    ]
+
+    Game >> getByTheMainDoor [
+        ^byTheMainDoor.
+    ]
+
+    Game >> getPepperSpray [
+        ^pepperSpray.
+    ]
+
+    Game >> getCrowbarFound [
+        ^crowbarFound.
     ]
 
     Game >> processInput: input [
