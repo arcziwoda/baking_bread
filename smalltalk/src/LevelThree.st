@@ -11,7 +11,7 @@ Level subclass: LevelThree [
         (action = 'look_around') ifTrue: [
             Transcript show: 'Walter: What do we have here that could be useful...'; cr.
             Transcript show: '[sees some whole grain bread, water, and some yeast]'; cr.
-            ^0
+            ^1
         ].
         (action = 'go_to' and: [arguments size >= 1 and: [arguments first = 'office_door']]) ifTrue: [
             Transcript show: 'Walter: Ok, the Kvass is ready, now let''s take it to the office''s door.'; cr.
