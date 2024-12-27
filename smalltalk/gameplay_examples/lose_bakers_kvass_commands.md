@@ -16,15 +16,15 @@
 |           | `go_to office_door`                | 19            |
 |           | `use kvass`                        | 15            |
 |           | `go_to office`                     | 14            |
-| **5**     | `look_around`                      |               |
-|           | `search desk`                      | 14            |
-|           | `hack computer`                    | 13            |
+| **5**     | `look_around`                      | 13            |
+|           | `search desk`                      | 12            |
+|           | `hack computer`                    | 11            |
 |           | `lalal`                            |               |
-|           | `talk_to cesar`                    | 12            |
+|           | `talk_to cesar`                    | 10            |
 |           | `ebiil`                            |               |
 |           | `3`                                |               |
-|           | `hack computer`                    | 11            |
+|           | `hack computer`                    | 9             |
 |           | `hello`                            |               |
-|           | `go_to main_door`                  | 10            |
-|           | `use keycard`                      | 9             |
+|           | `go_to main_door`                  | 8             |
+|           | `use keycard`                      | 7             |
 |           | `997420`                           |               |

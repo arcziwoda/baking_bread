@@ -17,15 +17,15 @@
 |           | `take pepper_spray`                             | 13            |
 |           | `use kvass`                                     | 12            |
 |           | `go_to office`                                  | 11            |
-| **5**     | `look_around`                                   |               |
-|           | `search desk`                                   | 11            |
-|           | `hack computer`                                 | 10            |
+| **5**     | `look_around`                                   | 10            |
+|           | `search desk`                                   | 9             |
+|           | `hack computer`                                 | 8             |
 |           | `lalal`                                         |               |
-|           | `talk_to cesar`                                 | 9             |
+|           | `talk_to cesar`                                 | 7             |
 |           | `ebiil`                                         |               |
 |           | `3`                                             |               |
-|           | `hack computer`                                 | 8             |
+|           | `hack computer`                                 | 6             |
 |           | `hello`                                         |               |
-|           | `go_to main_door`                               | 7             |
-|           | `use keycard`                                   | 6             |
+|           | `go_to main_door`                               | 5             |
+|           | `use keycard`                                   | 4             |
 |           | `997420`                                        |               |
