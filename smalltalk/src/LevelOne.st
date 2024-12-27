@@ -86,6 +86,7 @@ Level subclass: LevelOne [
             game setCurrentLevel: (LevelTwo new).
             ^1
         ].
+        Transcript show: 'This is not a valid command.'; cr.
         ^1
     ]
 

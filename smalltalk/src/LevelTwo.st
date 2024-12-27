@@ -19,6 +19,7 @@ Level subclass: LevelTwo [
                 Transcript show: 'Jesse: Yo, Mr. Black, we gotta go back to the lab to make the Kvass, let''s go!'; cr.
                 game setCanMakeKvass.
             ].
+            ^1
         ].
         (action = 'go_to' and: [(arguments size >= 1)]) ifTrue: [
             (arguments first = 'storage' and: [game getCanMakeLockpick.]) ifTrue: [
@@ -27,7 +28,9 @@ Level subclass: LevelTwo [
             (arguments first = 'lab' and: [game getCanMakeKvass.]) ifTrue: [
                 game setCurrentLevel: (LevelThree new).
             ].
+            ^1
         ].
+        Transcript show: 'This is not a valid command.'; cr.
         ^1
     ]
 ]

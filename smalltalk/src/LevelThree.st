@@ -2,7 +2,7 @@ Level subclass: LevelThree [
     LevelThree >> init: aGame [
         game := aGame.
         Transcript show: 'Jesse: I think we have some leftover Kvass from the last batch of bread.'; cr.
-        Transcript show: 'Watler: Yes, over there, but it''s pretty weak, it won''t dissolve the lock quickly.'; cr.
+        Transcript show: 'Walter: Yes, over there, but it''s pretty weak, it won''t dissolve the lock quickly.'; cr.
         Transcript show: 'Jesse: Aight, then maybe we could add something to make it stronger or go straight to the office door and use it.'; cr.
         ^self
     ]
@@ -11,7 +11,7 @@ Level subclass: LevelThree [
         (action = 'look_around') ifTrue: [
             Transcript show: 'Walter: What do we have here that could be useful...'; cr.
             Transcript show: '[sees some whole grain bread, water, and some yeast]'; cr.
-            ^1
+            ^0
         ].
         (action = 'go_to' and: [arguments size >= 1 and: [arguments first = 'office_door']]) ifTrue: [
             Transcript show: 'Walter: Ok, the Kvass is ready, now let''s take it to the office''s door.'; cr.
@@ -84,7 +84,7 @@ Level subclass: LevelThree [
                 (dissolveTime = 1) ifTrue: [
                     Transcript show: 'It took 1 minute to dissolve the lock'; cr.
                 ] ifFalse: [
-                    Transcript show: 'It took ', dissolveTime printString, ' minutes to dissolve the lock'; cr.
+                    Transcript show: 'It took ', dissolveTime asString, ' minutes to dissolve the lock'; cr.
                 ].
                 Transcript show: '[Office door slowly opens]'; cr.
                 game setLockPicked.

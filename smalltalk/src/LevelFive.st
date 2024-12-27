@@ -5,6 +5,7 @@ Level subclass: LevelFive [
         ^self
     ]
     LevelFive >> processInput [
+        Transcript show: 'This is not a valid command.'; cr.
         ^1
     ]
 ]
