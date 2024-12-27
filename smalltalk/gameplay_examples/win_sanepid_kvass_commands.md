@@ -2,8 +2,8 @@
 
 | **Level** | **Action**                                      | **Time Left** |
 |-----------|-------------------------------------------------|---------------|
+|           | **help**                                        |               |
 |           | **start**                                       |               |
-|           | **play**                                        |               |
 | **1**     | `talk_to jesse`                                 |               |
 |           | `look_around`                                   |               |
 |           | `add muffins los_pollos_hermanos_sauce`         |               |
@@ -11,12 +11,12 @@
 |           | `go_to main_door`                               | 19            |
 | **2**     | `choose_path jesse`                             | 18            |
 |           | `go_to lab`                                     | 17            |
-| **3**     | `look_around`                                   |               |
-|           | `add kvass whole_grain_bread`                   | 16            |
-|           | `go_to office_door`                             | 15            |
-|           | `take pepper_spray`                             | 14            |
-|           | `use kvass`                                     | 13            |
-|           | `go_to office`                                  | 12            |
+| **3**     | `look_around`                                   | 16            |
+|           | `add kvass whole_grain_bread`                   | 15            |
+|           | `go_to office_door`                             | 14            |
+|           | `take pepper_spray`                             | 13            |
+|           | `use kvass`                                     | 12            |
+|           | `go_to office`                                  | 11            |
 | **5**     | `look_around`                                   |               |
 |           | `search desk`                                   | 11            |
 |           | `hack computer`                                 | 10            |

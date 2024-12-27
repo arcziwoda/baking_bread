@@ -2,7 +2,8 @@
 
 | **Level** | **Action**                         | **Time Left** |
 |-----------|------------------------------------|---------------|
-|           | **Start**                          |               |
+|           | **help**                           |               |
+|           | **start**                          |               |
 | **1**     | `talk_to jesse`                    |               |
 |           | `look_around`                      |               |
 |           | `add muffins blue_food_coloring`   |               |
@@ -10,11 +11,11 @@
 |           | `go_to main_door`                  | 24            |
 | **2**     | `choose_path jesse`                | 23            |
 |           | `go_to lab`                        | 22            |
-| **3**     | `look_around`                      |               |
-|           | `add kvass water`                  | 21            |
-|           | `go_to office_door`                | 20            |
-|           | `use kvass`                        | 16            |
-|           | `go_to office`                     | 15            |
+| **3**     | `look_around`                      | 21            |
+|           | `add kvass water`                  | 20            |
+|           | `go_to office_door`                | 19            |
+|           | `use kvass`                        | 15            |
+|           | `go_to office`                     | 14            |
 | **5**     | `look_around`                      |               |
 |           | `search desk`                      | 14            |
 |           | `hack computer`                    | 13            |

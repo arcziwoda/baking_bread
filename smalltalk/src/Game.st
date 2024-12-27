@@ -128,6 +128,34 @@ Object subclass: Game [
         timeLeft := aValue.
     ]
 
+    Game >> decrementKvassDisolveTime: aValue [
+        kvassDisolveTime := kvassDisolveTime - aValue.
+    ]
+
+    Game >> setByTheOfficeDoor [
+        byTheOfficeDoor := true.
+    ]
+
+    Game >> setAddedWholeGrainBread [
+        addedWholeGrainBread := true.
+    ]
+
+    Game >> setAddedYeast [
+        addedYeast := true.
+    ]
+
+    Game >> setAddedWater [
+        addedWater := true.
+    ]
+
+    Game >> setPepperSprayTaken [
+        pepperSpray := true.
+    ]
+
+    Game >> setLockPicked [
+        lockPicked := true.
+    ]
+
     Game >> getUserInput [
         Transcript show: 'Enter command: '.
         ^(FileStream stdin nextLine)
@@ -159,6 +187,30 @@ Object subclass: Game [
 
     Game >> getCanMakeLockpick [
         ^canMakeLockpick.
+    ]
+
+    Game >> isByTheOfficeDoor [
+        ^byTheOfficeDoor.
+    ]
+
+    Game >> getAddedWholeGrainBread [
+        ^addedWholeGrainBread.
+    ]
+
+    Game >> getAddedYeast [
+        ^addedYeast.
+    ]
+
+    Game >> getAddedWater [
+        ^addedWater.
+    ]
+
+    Game >> getLockPicked [
+        ^lockPicked.
+    ]
+
+    Game >> getKvassDisolveTime [
+        ^kvassDisolveTime.
     ]
 
     Game >> processInput: input [
