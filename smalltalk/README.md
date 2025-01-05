@@ -10,7 +10,8 @@ As the player, you're locked in a secret bakery filled with hazardous materials 
 
 ## How to Play
 
-### 1. Clone the Repository:
+### 1. Clone the Repository
+
 First, clone the repository to your local machine using Git.
 
 ```bash
@@ -18,18 +19,21 @@ git clone https://gitlab-stud.elka.pw.edu.pl/oszypczy/breaking-bad-lab-escape
 cd breaking-bad-lab-escape/smalltalk/
 ```
 
-### 2. Install GNU SmallTalk 
+### 2. Install GNU SmallTalk
 
-#### For Linux Users:
+#### For Linux Users
+
 You can install GNU Smalltalk using your package manager.
 
 - **Ubuntu/Debian:**
+
   ```bash
   sudo apt update
   sudo apt install gnu-smalltalk
   ```
 
-### 3. Build and Run the Game:
+### 3. Build and Run the Game
+
 To start playing, build and run the game with the following commands:
 
 ```bash
@@ -38,7 +42,8 @@ make run
 
 Upon starting, you’ll be presented with a description of your surroundings and a set of possible actions. Type your action and press Enter to advance.
 
-### Example:
+### Example
+
 ```plaintext
 Enter command: add kvass whole_grain_bread
 Jesse: Do you want to add anything else or we good to go?
@@ -62,8 +67,10 @@ Enter command: go_to office
 Jesse: Yessss, it worked Mr. Black, we're in!
 ```
 
-### 4. Quitting the Game:
+### 4. Quitting the Game
+
 To exit, type `quit` when prompted for your action.
 
 ## Development
+
 This project was originally developed in **Prolog**, **Haskell**, and has now been rewritten in **Smalltalk** to demonstrate the versatility and power of different programming paradigms. The Smalltalk version emphasizes object-oriented design and interactive development.

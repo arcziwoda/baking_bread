@@ -160,6 +160,10 @@ Object subclass: Game [
         lockPicked := true.
     ]
 
+    Game >> setPickCreated [
+        pickCreated := true.
+    ]
+
     Game >> setKeycardFound [
         keycardFound := true.
     ]
@@ -170,6 +174,10 @@ Object subclass: Game [
 
     Game >> setByTheMainDoor [
         byTheMainDoor := true.
+    ]
+
+    Game >> setCrowbarFound [
+        crowbarFound := true.
     ]
 
     Game >> getUserInput [
@@ -225,6 +233,10 @@ Object subclass: Game [
         ^lockPicked.
     ]
 
+    Game >> getPickCreated [
+        ^pickCreated
+    ]
+
     Game >> getKvassDisolveTime [
         ^kvassDisolveTime.
     ]
@@ -239,6 +251,10 @@ Object subclass: Game [
 
     Game >> getByTheMainDoor [
         ^byTheMainDoor.
+    ]
+
+    Game >> getByTheOfficeDoor [
+        ^byTheOfficeDoor
     ]
 
     Game >> getPepperSpray [
