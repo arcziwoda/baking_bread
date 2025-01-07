@@ -12,7 +12,7 @@ Level subclass: LevelFour [
             Transcript show: 'Walter: These tools could help us make a lockpick. I belive it is made from two things.'; cr.
             Transcript show: '[sees a hatch, a tool cabinet, a metal barrel, and a dumpster]'; cr.
             Transcript show: 'Walter: We could search these places for the crowbar.'; cr.
-            ^1
+            ^0
         ].
         (action = 'search' and: [arguments size >= 1]) ifTrue: [
             (game getCrowbarFound) ifFalse: [
@@ -33,10 +33,10 @@ Level subclass: LevelFour [
             ((arguments includes: 'metal_wires') and: [arguments includes: 'hammer']) ifTrue: [
                 Transcript show: 'Walter: Perfect! Now we can try to use the lockpick.'; cr.
                 game setPickCreated.
-                ^1
+                ^2
             ] ifFalse: [
                 Transcript show: 'Walter: Damn, that didn''t work. We''re wasting time!'; cr.
-                ^1
+                ^2
             ]
         ]. 
         (action = 'go_to' and: [arguments size >= 1]) ifTrue: [
@@ -107,7 +107,7 @@ Level subclass: LevelFour [
                 Transcript show: 'Walter: Keep going, the lock is almost there!'; cr.
             ] ifFalse: [
                 Transcript show: 'Walter: Damn, that was the wrong move. We lost some time!'; cr.
-                progress := OrderedCollection new. 
+                ^self.
             ].
         ].
 

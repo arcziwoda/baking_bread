@@ -8,7 +8,7 @@ Level subclass: LevelFive [
         (action = 'look_around') ifTrue: [
             Transcript show: 'Walter: Let''s find that keycard...'; cr.
             Transcript show: '[The office is small. There are shelves and desk with computer on it]'; cr.
-            ^1
+            ^0
         ].
         (action = 'search' and: [arguments size >= 1]) ifTrue: [
             (game getKeycardFound) ifFalse: [

@@ -1,0 +1,192 @@
+### Introduction ###
+---------------------------------------------
+Welcome to Baking B(re)ad: The Lab Escape!
+You are Walter Black, a brilliant baker working in Sus' bakery.
+You work in a secret lab under the laundromat.
+You are famous for your signature blue muffins, which rival bakers envy.
+Your partner, known as Jesse Yellowman, is with you.
+He is not as smart as you, but he is loyal and can help you.
+If you type "help" Jesse will remind you of the possible commands.
+After a botched deal, your situation has become dire.
+You feel like one mistake could be your last.
+After a long day of work it is time to add the last ingredient to your product.
+Good luck!
+---------------------------------------------
+Type "help" to see the game rules.
+Type "start" to begin the game.
+Enter command: start
+Walter: Yo, Jesse, you there?
+Jesse: Yeah, Mr. Black, what's up?
+Walter: It's been a rough day, huh?
+Jesse: You bet. These blue muffins are no joke.
+Walter: We need to finish them up.
+Enter command: talk_to jesse
+Jesse: Man, I never thought baking could be this intense.
+Walter: It's all about precision, Jesse. One wrong move and it's all over.
+Jesse: Yeah, yeah, I get it. But these muffins... they're something else.
+Walter: They have to be perfect. Our reputation depends on it.
+Jesse: Yo, Mr. Black, what's the final ingredient for the cake?
+Jesse: I totally forgot, man. Maybe you should look around to see what's on the table.
+Enter command: look_around
+Walter: Let's see what's on the table...
+[sees sugar, blue food coloring, baking soda and los pollos hermanos sauce]
+Enter command: add muffins los_pollos_hermanos_sauce
+Walter: Damn it! The oven overheated! The alarms are going off!
+Jesse: The sanepid will come soon, they will know about the secret bakery!
+[The phone rings]
+Jesse: Yo, Mr. Black! It's Saul! Better pick that up!
+Enter command: talk_to saul
+Saul Badman: Hey, genius! What did you do? The sanepid is coming! You better run!
+Walter: Damn it, Saul. How much time do we have?
+Saul Badman: Not much, Walter. You need to get out of there, fast!
+Jesse: Mr. Black, we gotta move! What now?
+Walter: Head to the main door, Jesse. We don't have much time!
+Jesse: Got it, let's get outta here!
+Time left 20
+Enter command: go_to main_door
+Jesse: Yo, the door won't open!
+Walter: Damn it, it can only be unlocked by a key card. I think it's locked in Sus' office.
+Jesse: And how do we get there?
+Walter: We don't have the key, but we could try to pick the lock.
+Jesse: I ain't no locksmith, we should use some Kvass to melt the lock.
+Walter: We have to pick one of the options, we don't have much time left!
+Time left 19
+Enter command: choose_path walter
+Walter: We should be able to make the lockpick out of some scraps left in the storage. Follow me.
+Time left 18
+Enter command: go_to storage
+Jesse: We need to find tools for making a lockpick!
+Walter: Or we could try to find a crowbar somewhere.
+Time left 17
+Enter command: look_around
+Walter: Let's see what we can find here...
+[sees some metal wires, a screwdriver, a hammer, and a wrench]
+Walter: These tools could help us make a lockpick. I belive it is made from two things.
+[sees a hatch, a tool cabinet, a metal barrel, and a dumpster]
+Walter: We could search these places for the crowbar.
+Time left 17
+Enter command: create_pick metal_wires screwdriver
+Walter: Damn, that didn't work. We're wasting time!
+"Global garbage collection... done"
+Time left 15
+Enter command: create_pick screwdriver hammer
+Walter: Damn, that didn't work. We're wasting time!
+Time left 13
+Enter command: create_pick metal_wires hammer
+Walter: Perfect! Now we can try to use the lockpick.
+Time left 11
+Enter command: go_to office_door
+Walter: Now we can try to open the door.
+Jesse: Do you know how to do it?
+Walter: We just have to try and hope for the best...
+Time left 10
+Enter command: use lockpick
+Walter: Alright, let's try to pick the lock.
+Walter: We need to move the pick carefully: up, right, down.
+Walter: If we make a mistake, we'll have to start over.
+Enter a direction (up, right, down):
+up
+Walter: Keep going, the lock is almost there!
+Enter a direction (up, right, down):
+up
+Walter: Damn, that was the wrong move. We lost some time!
+Time left 9
+Enter command: use lockpick
+Walter: Alright, let's try to pick the lock.
+Walter: We need to move the pick carefully: up, right, down.
+Walter: If we make a mistake, we'll have to start over.
+Enter a direction (up, right, down):
+up
+Walter: Keep going, the lock is almost there!
+Enter a direction (up, right, down):
+down
+Walter: Damn, that was the wrong move. We lost some time!
+Time left 8
+Enter command: use lockpick
+Walter: Alright, let's try to pick the lock.
+Walter: We need to move the pick carefully: up, right, down.
+Walter: If we make a mistake, we'll have to start over.
+Enter a direction (up, right, down):
+up
+Walter: Keep going, the lock is almost there!
+Enter a direction (up, right, down):
+right
+Walter: Keep going, the lock is almost there!
+Enter a direction (up, right, down):
+down
+Walter: Keep going, the lock is almost there!
+Walter: We did it! The lock is open!
+[The office door slowly opens]
+Time left 7
+Enter command: go_to office
+Walter: Alright, the office door is open. Let's move on!
+Jesse: Let's go, man!
+Jesse: Yessss, it worked Mr. Black, we're in!
+Time left 6
+Enter command: look_around
+Walter: Let's find that keycard...
+[The office is small. There are shelves and desk with computer on it]
+Time left 6
+Enter command: search desk
+Jesse: Here it is!
+Walter: Found it!
+Jesse: That's the stuff, Mr. Black!
+[Reads the keycard: In order to open the main door you need to provide the PIN code]
+Walter: Damn it Jesse, we need to hack the computer to get the PIN code!
+Jesse: Let's do it!
+Time left 5
+Enter command: hack computer
+The encrypted password is: ebiil
+Enter the decrypted password: abcde
+Walter: Wrong password!
+Jesse: My friend Cesar can help us with that task!
+Jesse: Just call him and tell him the encryption with your shift guess!
+Time left 4
+Enter command: talk_to cesar
+Jesse: Let's see if Cesar picks up...
+Cesar: Hello?
+Jesse: Yo Cesar, it's Jesse, I don't have time to explain, but can you help us decrypt a computer password?
+Cesar: Um... sure, what's the encrypted password?
+Enter the encrypted password: ebiil
+Cesar: Alright, now I need you to tell me by how much to shift the letters.
+Enter the shift value: 1
+Jesse: Eee... I don't know, but maybe 1.
+Cesar: ebiil shifted by 1 is fcjjm.
+Time left 3
+Enter command: talk_to cesar
+Jesse: Let's see if Cesar picks up...
+Cesar: Hello?
+Jesse: Yo Cesar, it's Jesse, I don't have time to explain, but can you help us decrypt a computer password?
+Cesar: Um... sure, what's the encrypted password?
+Enter the encrypted password: ebiil
+Cesar: Alright, now I need you to tell me by how much to shift the letters.
+Enter the shift value: 2
+Jesse: Eee... I don't know, but maybe 2.
+Cesar: ebiil shifted by 2 is gdkkn.
+Time left 2
+Enter command: talk_to cesar
+Jesse: Let's see if Cesar picks up...
+Cesar: Hello?
+Jesse: Yo Cesar, it's Jesse, I don't have time to explain, but can you help us decrypt a computer password?
+Cesar: Um... sure, what's the encrypted password?
+Enter the encrypted password: ebiil
+Cesar: Alright, now I need you to tell me by how much to shift the letters.
+Enter the shift value: 3
+Jesse: Eee... I don't know, but maybe 3.
+Cesar: ebiil shifted by 3 is hello.
+Time left 1
+Enter command: hack computer
+The encrypted password is: ebiil
+Enter the decrypted password: hello
+Walter: We did it!
+Jesse: Yeah, science!
+[The computer displays the PIN code: 997420]
+Walter: Let's go to the main door and get out of here!
+[Walter and Jesse didn't escape in time and the sanepid inspector made it to the lab]
+Hank Schrader: Sanepid inspection! Get out of there now!
+Walter: We should have taken something to defend ourselves!
+Hank Schrader: You're under arrest!
+[Hank arrests Walter and Jesse]
+==============================================
+                  YOU LOST
+==============================================
